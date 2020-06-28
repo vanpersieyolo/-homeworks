@@ -2,9 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>tao form servey</title>
 </head>
 <body>
-$END$
+<header>
+    <fieldset style="line-break: loose"> <div> <h2> Market Research Survey</h2>
+        Please take a few moments to complete this satisfaction survey.
+    </div></fieldset>
+</header>
+<div>
+    <p> <h2> What is your age range ?</h2></p>
+    <select name="age" style="width: 500px">
+        <option value="HN">18-24</option>
+        <option value="HP">25-34</option>
+        <option value="HU">35-50</option>
+        <option value="DN">50+</option>
+    </select>
+</div><br>
+
+<div><p> <h2> What is your yearly income range ?</h2></p>
+    <select name="age" style=" width: 500px">
+        <option value="HN">0$ - 25.000$</option>
+        <option value="HP">25.001$ - 50.000$</option>
+        <option value="HU">50.001$ - 100.000$</option>
+        <option value="DN">100.000$+</option>
+    </select>
+</div><br>
+
+<div>
+    <p><h2>Gender Identity</h2></p>
+    <label><input type="radio" name="gender identity">  male
+        <br><br></label>
+    <label><input type="radio" name="gender identity">  female
+        <br><br></label>
+    <label><input type="radio" name="gender identity">  nonbinary
+        <br><br></label>
+    <label><input type="radio" name="gender identity">     other
+        <br><br></label>
+    <label><empty></empty><input type="text" name=" other">
+</div><br></label>
+
+<form>
+    <h2>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h2><br>
+    <label><input type="checkbox" value="product 1" name="1">  product 1 <br></label><br>
+    <label><input type="checkbox" value="product 2" name="2">  product 2 <br></label><br>
+    <label><input type="checkbox" value="product 3" name="2">  product 3 <br></label><br>
+</form>
+
+<form>
+    <h2>How often would you use our new product?</h2>
+    <label><input type="radio" name="1" value="a">  daily<br></label><br>
+    <label><input type="radio" name="1" value="a">  weekly<br></label><br>
+    <label><input type="radio" name="1" value="a">  monthly<br></label><br>
+</form>
+
+<form>
+    <h2>What would you pay for the new product?</h2><br>
+    $<input type="text" size="10"> . <input type="text" size="2">
+</form>
+
+<form>
+    <h2>What features would you like to see in the new product.</h2>
+<textarea  rows="10" cols="250"></textarea>
+
+</form>
+
+
 </body>
 </html>
