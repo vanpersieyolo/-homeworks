@@ -1,0 +1,10 @@
+header{
+    background: chocolate;
+    width: 90%  ;
+}
+body    {
+    border-color: aqua;
+    border-width: 10px;
+    border-style: solid;
+    width: 40%;
+}
