@@ -1,0 +1,8 @@
+td{
+    width: 30px;
+    height: 30px;
+    background: black;
+}
+td.row1{
+    background-color: yellow;
+}
