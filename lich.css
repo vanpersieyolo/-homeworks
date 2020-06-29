@@ -1,0 +1,11 @@
+td{
+    width: 80px;
+    height: 30px;
+    background-color: white;
+}
+table{
+    border-color: cornflowerblue;
+}
+td.row1{
+    border-color: white;
+}
