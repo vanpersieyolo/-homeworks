@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ung dung chuyen tien 2func</title>
+</head>
+<body>
+<body>
+nhap so tien <input type="text" id="nhapsotien">
+<br><br>
+<select id="luachon1">
+    <option value="dl">dollars</option>
+    <option value="vnd">vnd</option>
+</select> chuyen sang
+<select id="luachon2">
+    <option value="vnd">vnd</option>
+    <option id="dl">dollars</option>
+</select>
+<br><br>
+<button type="button" onclick="doitien()">chuyen doi</button>
+<div id="doitiennhe"></div>
+<script>
+    function doitien() {
+        var inp = document.getElementById('nhapsotien').value;
+        var lchon1 = document.getElementById('luachon1').value;
+        var lchon2 = document.getElementById('luachon2').value;
+        var ketqua = thuattoan(inp,lchon1,lchon2);
+        document.getElementById('doitiennhe').innerHTML = ketqua;
+    }
+    function thuattoan() {
+        var
+
+        }
+
+    }
+</script>
+</body>
+</html>
