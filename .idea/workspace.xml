@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/thuchanhsukienchuot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/baitapmaytinhdongian.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/baitapmaytinhdongian.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/baitapmaytinhdongian.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuchanhsukienchuot.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -50,6 +55,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Angular2Html" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -81,7 +87,8 @@
       <workItem from="1593443565568" duration="1708000" />
       <workItem from="1593447681409" duration="3313000" />
       <workItem from="1593526279631" duration="12889000" />
-      <workItem from="1593616353515" duration="2567000" />
+      <workItem from="1593616353515" duration="4084000" />
+      <workItem from="1593688111627" duration="5230000" />
     </task>
     <servers />
   </component>
