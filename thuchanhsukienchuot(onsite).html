@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh su kien chuot</title>
+</head>
+<body>
+<form>
+    <img id="quabong" src="anhquabong.jpg" height="450" width="450"/></form>
+    <p>Click vao nut de qua bong di chuyen</p>
+    <input onclick="moveRight()" type="button" value="Click"/>
+<script>
+    var imgObj = null;
+    imgObj = document.getElementById('quabong');
+    function init() {
+        imgObj = document.getElementById('quabong');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+    }
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left)  + 10 + 'px';
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
