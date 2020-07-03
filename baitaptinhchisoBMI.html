@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>btap tinh chi so BMI</title>
+</head>
+<body>
+<form>
+    nhap so can nang (kg):
+    <input type="number" id="nhapcannang"/><br>
+    nhap chieu cao (m) :
+    <input type="number" id="nhapchieucao"/><br>
+    <button type="button" onclick="bmi()" >BMI</button>
+</form>
+<script>
+
+
+
+    function bmi() {
+
+        var chieucao = document.getElementById('nhapchieucao').value;
+        var cannang = document.getElementById('nhapcannang').value;
+        var chisobmi = cannang / (chieucao * chieucao);
+
+
+        chieucao = parseFloat(chieucao);
+        cannang = parseFloat(cannang);
+
+
+        if (chisobmi < 18.5){
+            alert('underweight !');
+        }else if (chisobmi < 25 ){
+           alert('normal');
+        }else if (chisobmi < 30){
+            alert("overweight");
+        }else alert('obese');
+
+        }
+
+</script>
+</body>
+</html>
