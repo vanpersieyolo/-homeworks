@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap gaem puzzle</title>
+    <link rel="stylesheet" href="baitapgamepuzzle.css">
+</head>
+<body>
+<div>
+    <tr>
+        <td><button type="button" class="imgleft" onclick='hienthikhicham(this)'><img src="left.PNG" height=100% width=100% onmouseover="hienthikhicham(this)" onmouseout="moveauto(this)" id="anh1"/></button>
+        <td><button type="button" class="imgleft"><img src="right.PNG" height="242" width="361" id="anh2"/></button></td>
+    </tr><br>
+    <tr>
+        <td><button type="button" class="imgleft"><img  src="under.PNG" height="210" width="698"/></td></button>
+    </tr>
+</div><br>
+<div>
+    <tr >
+        <center><thpx">MỜI BẠN BẤM VÀO HÌNH ẢNH THỨ 1</th></center>
+    </tr>
+</div>
+<script>
+    function hienthikhicham() {
+        var obj = document.getElementById('anh1');
+        obj.style.height = "400px";
+        obj.style.width = "400px";
+    }
+    function moveauto() {
+        var flash = document.getElementById('anh1');
+        flash.style.height = "242px";
+        flash.style.width = "330px";
+    }
+
+</script>
+</body>
+</html>

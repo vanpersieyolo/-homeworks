@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>thuc hanh su kien ban phim</title>
 </head>
-<body onload= docReady()>
+<body onload="docReady()">
 <img id="tank"  style = "position: absolute ; left: 0; top: 0;" src="pngtree-yellow-green-military-weapon-illustration-png-image_4510263.jpg" height="400"
                  width="600" />
 
@@ -12,7 +12,7 @@
 <script>
     function dichuyenlen() {               //len
         var element = document.getElementById('tank');
-        element.style.top = parseInt(element.style.top)  10+ "px";
+        element.style.top = parseInt(element.style.top)  -10+ "px";
 
     }
     function dichuyenxuong() {              //xuong
