@@ -20,11 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/baitapmaytinhdongian.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baitapmaytinhdongian.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baitapmaytinhdongian.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập doyouloveme/baitapdouluvme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/baitapgamepuzzle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/funny-cat1_part1x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/funny-cat1_part2x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/funny-cat1_part3x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/funny-cat1_part4x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/funny-cat1_part5x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/monkey_part1x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/monkey_part2x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/monkey_part3x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/monkey_part4x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/monkey_part5x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/panda_swap_part1x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/panda_swap_part2x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/panda_swap_part3x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/panda_swap_part4x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/panda_swap_part5x1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thuchanhsukienchuot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baitapmaytinhdongian.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baitapmaytinhdongian.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baitapmaytinhdongian.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +50,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -88,7 +104,8 @@
       <workItem from="1593447681409" duration="3313000" />
       <workItem from="1593526279631" duration="12889000" />
       <workItem from="1593616353515" duration="4084000" />
-      <workItem from="1593688111627" duration="5230000" />
+      <workItem from="1593688111627" duration="6396000" />
+      <workItem from="1593786548701" duration="3421000" />
     </task>
     <servers />
   </component>
@@ -108,6 +125,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593786381325">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593786381325" />
     <state x="739" y="262" key="FileChooserDialogImpl" timestamp="1593360339223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

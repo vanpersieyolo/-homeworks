@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập do you love me</title>
+</head>
+<body>
+<p style="font: 100px">DO YOU LOVE ME ?</p>
+<button type="button" id="yes" onclick="yes()">Yes</button>
+<button type="button" id="nope"  onmouseover="jorker()" style="position:absolute; left 30px; top:50px;" >No</button>
+</body>
+<script>
+    function yes() {
+        alert('oke, goodjob');
+    }
+    function jorker() {
+        var a =  Math.round(Math.random() * window.innerWidth);
+        var b = Math.round(Math.random() * window.innerHeight);
+
+        document.getElementById('nope').style.top = b + 'px';
+        document.getElementById('nope').style.left = a + 'px';
+    }
+</script>
+</html>
