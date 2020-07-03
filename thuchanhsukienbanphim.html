@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh su kien ban phim</title>
+</head>
+<body onload="docReady()">
+<img id="tank"  style = "position: absolute ; left: 0; top: 0;" src="pngtree-yellow-green-military-weapon-illustration-png-image_4510263.jpg" height="400"
+                 width="600" />
+
+
+<script>
+    function dichuyenlen() {               //len
+        var element = document.getElementById('tank');
+        element.style.top = parseInt(element.style.top)  -10+ "px";
+
+    }
+    function dichuyenxuong() {              //xuong
+        var element = document.getElementById('tank');
+        element.style.top = parseInt(element.style.top) +10 +"px";
+    }
+    function dichuyensangtrai() {
+        var element = document.getElementById('tank');
+        element.style.left = parseInt(element.style.left) - 10 + 'px';
+    }
+    function  dichuyensangphai() {
+        var element = document.getElementById('tank');
+        element.style.left = parseInt(element.style.left) + 10 + 'px';
+    }
+    function moveclick(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                dichuyensangtrai();
+                break;
+            case 39:
+                dichuyensangphai();
+                break;
+            case 38:
+                dichuyenlen();
+                break;
+            case 40:
+                dichuyenxuong();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown',moveclick);
+    }
+</script>
+</body>
+</html>
