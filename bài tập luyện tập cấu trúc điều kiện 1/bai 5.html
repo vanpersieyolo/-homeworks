@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+</head>
+<body>
+<script>
+    var baikt1 = parseFloat(prompt(' nhap diem bai kiem tra so 1: ',''));
+    var baikt2 = parseFloat(prompt('nhap diem bai kiem tra 2: ',''));
+    var thigiuaki = parseFloat(prompt('nhap diem thi giua ki: ',''));
+    var thicuoiki = parseFloat(prompt('nhap diem thi cuoi ki: ',''));
+    var diemTb = (baikt1 + baikt2 + (thigiuaki * 2) + (thicuoiki * 3))/7    ;
+    if (diemTb >= 8){
+        alert('ban dat loai gioi!');
+    }else if (diemTb >= 6.5){
+        alert('ban dat loai kha!');
+    }else alert('ban hoc dot vl!');
+</script>
+</body>
+</html>
