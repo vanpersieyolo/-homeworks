@@ -20,27 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bài tập doyouloveme/baitapdouluvme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/baitapgamepuzzle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/funny-cat1_part1x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/funny-cat1_part2x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/funny-cat1_part3x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/funny-cat1_part4x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/funny-cat1_part5x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/monkey_part1x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/monkey_part2x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/monkey_part3x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/monkey_part4x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/monkey_part5x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/panda_swap_part1x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/panda_swap_part2x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/panda_swap_part3x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/panda_swap_part4x1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập game puzzle/panda_swap_part5x1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thực hành sử dụng vòng lặp for/bai 2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baitapmaytinhdongian.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baitapmaytinhdongian.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baitapmaytinhdongian.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +86,8 @@
       <workItem from="1593526279631" duration="12889000" />
       <workItem from="1593616353515" duration="4084000" />
       <workItem from="1593688111627" duration="6396000" />
-      <workItem from="1593786548701" duration="3421000" />
+      <workItem from="1593786548701" duration="7319000" />
+      <workItem from="1593876739241" duration="1450000" />
     </task>
     <servers />
   </component>
