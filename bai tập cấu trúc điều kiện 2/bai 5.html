@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+</head>
+<body>
+    <script>
+        var canhA = parseInt(prompt('nhap vao canh a: ',''));
+        var canhB = parseInt(prompt('nhap vao canh b: ',''));
+
+        function canhHuyen(canhA,canhB){
+            var canhH2 = (canhA * canhA)+(canhB * canhB);
+            var canhhuyen = Math.sqrt(canhH2);
+
+            var P = canhA + canhB + canhhuyen;
+            console.log
+            var cCao = 1/2 * ( canhA + canhB);
+            var dienTich = 1/2 * cCao * canhhuyen;
+
+            alert('dien tich tam giac la: ' +dienTich);
+        }
+        canhHuyen(canhA,canhB);
+
+    </script>
+</body>
+</html>

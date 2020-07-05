@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 7</title>
+</head>
+<body>
+<script>
+    var nhapA = parseInt(prompt('nhap a: ',''));
+    var nhapB = parseInt(prompt('nhap b: ',''));
+    var nhapC = parseInt(prompt('nhap c: ',''));
+
+    var delta = (nhapB * nhapB) - (4 * nhapA * nhapC);
+
+    if ( delta < 0 ){
+        alert('pt vo nghiem');
+    }else  if (delta = 0){
+        var nghiemkep = (-nhapB)/2 * nhapA;
+        alert('pt co 1 nghiem kep: ' + nghiemkep);
+    }else
+        var xmot = (-nhapB + Math.sqrt(delta)) / 2 * nhapA;
+        var xhai = (-nhapB - Math.sqrt(delta)) / 2 * nhapA;
+    alert('pt co 2 nghiem: '+ xmot,xhai);
+</script>
+</body>
+</html>
