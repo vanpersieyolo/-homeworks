@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/thực hành sử dụng vòng lặp do - while/bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thực hành sử dụng vòng lặp do - while/bai 2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thực hành sử dụng vòng lặp do - while/bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/thực hành sử dụng vòng lặp do - while/bai1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +90,7 @@
       <workItem from="1593786548701" duration="7319000" />
       <workItem from="1593876739241" duration="2880000" />
       <workItem from="1593929884396" duration="670000" />
+      <workItem from="1593954111879" duration="1878000" />
     </task>
     <servers />
   </component>
