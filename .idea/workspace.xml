@@ -20,9 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/thực hành sử dụng vòng lặp do - while/bai 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thực hành vòng lặp do - while/bai 1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thực hành vòng lặp lồng nhau/bai1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thực hành vòng lặp lồng nhau/vonglaplongnhau.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thực hành sử dụng vòng lặp do - while/bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/thực hành sử dụng vòng lặp do - while/bai1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bài tập ứng dụng G-F-C/baitapungdungG-F-C.html" beforeDir="false" afterPath="$PROJECT_DIR$/bài tập ứng dụng G-F-C/baitapungdungG-F-C.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thực hành sử dụng vòng lặp do - while/bai 2.html" beforeDir="false" afterPath="$PROJECT_DIR$/thực hành sử dụng vòng lặp while/bai 2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thực hành sử dụng vòng lặp do - while/bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/thực hành sử dụng vòng lặp while/bai1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +36,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -61,6 +65,16 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager">
+    <configuration name="bai 1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/bai ve nha/thực hành vòng lặp do - while/bai 1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.bai 1.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -90,7 +104,7 @@
       <workItem from="1593786548701" duration="7319000" />
       <workItem from="1593876739241" duration="2880000" />
       <workItem from="1593929884396" duration="670000" />
-      <workItem from="1593954111879" duration="1878000" />
+      <workItem from="1593954111879" duration="8264000" />
     </task>
     <servers />
   </component>
@@ -110,6 +124,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="665" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593957429059">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="665" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593957429059" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593786381325">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
