@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+    <script>
+        var nhapV = prompt('nhap vao: ','');
+        var a = 0;
+        var b = 1;
+        var resultF = b;
+
+        for (i = 0; i < nhapV ; i++){
+            resultF = a + b;
+            a = b;
+            b = resultF;
+            if (resultF % 5 ==0){
+                document.write(resultF+' la so dau tien trong chuo chia het cho 5');
+                break;
+            }
+        }
+
+    </script>
+</body>
+</html>

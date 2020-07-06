@@ -6,13 +6,17 @@
 </head>
 <body>
     <script>
-        var a = prompt('nhap vao so fabonaci muon hien thi: ','');
-        var fbnc;
-        while (a == 0 || a==1){
-            for (let i = 0; i < a; i++){
-                fbnc = fbnc*(a-1)+ fbnc(a-2);
-                console.log('___'+fbnc);
-            }
+        var a,b,result;
+        var nhapVao = prompt('nhap vao so fbns can hien thi','');
+        a = 0;
+        b = 1;
+        result = b;
+
+        for (var i=1; i <= nhapVao;i++){
+            document.write(result+'<br>');
+            result = a + b;
+            a = b;
+            b = result;
         }
     </script>
 </body>

@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/thực hành vòng lặp do - while/bai 1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thực hành vòng lặp lồng nhau/bai1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thực hành vòng lặp lồng nhau/vonglaplongnhau.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai7.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bài tập ứng dụng G-F-C/baitapungdungG-F-C.html" beforeDir="false" afterPath="$PROJECT_DIR$/bài tập ứng dụng G-F-C/baitapungdungG-F-C.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thực hành sử dụng vòng lặp do - while/bai 2.html" beforeDir="false" afterPath="$PROJECT_DIR$/thực hành sử dụng vòng lặp while/bai 2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thực hành sử dụng vòng lặp do - while/bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/thực hành sử dụng vòng lặp while/bai1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai 3.html" beforeDir="false" afterPath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai 3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +36,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -104,7 +103,9 @@
       <workItem from="1593786548701" duration="7319000" />
       <workItem from="1593876739241" duration="2880000" />
       <workItem from="1593929884396" duration="670000" />
-      <workItem from="1593954111879" duration="8264000" />
+      <workItem from="1593954111879" duration="9106000" />
+      <workItem from="1593966985623" duration="26000" />
+      <workItem from="1594049266053" duration="5060000" />
     </task>
     <servers />
   </component>
@@ -136,5 +137,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593360339223" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1593963874665">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593963874665" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1593963874665">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593963874665" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1593963874665">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593963874665" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1593963874665">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593963874665" />
+    <state width="1899" height="282" key="GridCell.Tab.1.bottom" timestamp="1593963874665">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593963874665" />
+    <state width="1899" height="282" key="GridCell.Tab.1.center" timestamp="1593963874665">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593963874665" />
+    <state width="1899" height="282" key="GridCell.Tab.1.left" timestamp="1593963874665">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593963874665" />
+    <state width="1899" height="282" key="GridCell.Tab.1.right" timestamp="1593963874665">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593963874665" />
+    <state x="758" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594049968151">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="758" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594049968151" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594053351924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594053351924" />
   </component>
 </project>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    var nhapV = prompt('nhap vao so chu so can hien thi','');
+    var a = 0;
+    var b = 1;
+    var ketqua = b;
+    var tong = 0;
+    for (let i = 0; i <=nhapV; i++ ){
+        ketqua = a  + b;
+        a = b;
+        b = ketqua;
+        tong += ketqua;
+
+       document.write('day so:'+ ketqua +'__'+ tong +'tong'+'<br>');
+
+    }
+
+
+
+</script>
+</body>
+</html>
