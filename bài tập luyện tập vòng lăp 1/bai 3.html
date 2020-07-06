@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+    <script>
+        var a = prompt('nhap vao so fabonaci muon hien thi: ','');
+        var fbnc;
+        while (a == 0 || a==1){
+            for (let i = 0; i < a; i++){
+                fbnc = fbnc*(a-1)+ fbnc(a-2);
+                console.log('___'+fbnc);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -8,10 +8,16 @@
 <body>
 
 <script>
-    for (i = 1; i < 10; i ++){
-        document.write('<table border="1"><tr>' + i + '</tr></table>');
-
+    var o = '<table border="1">'
+    for (var i = 1; i <= 10 ; i++){
+        o = o + '<tr>';
+        for (var j = 1; j <=10;j++){
+        o = o + '<td>'+ i * j + '</td>';
+        }
+        o = o + '</tr>';
     }
+    o = o + '</table>';
+    document.write(o);
 </script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai10</title>
+</head>
+<body>
+<script>
+    var sodienused = parseInt(prompt('nhap vao so dien da dung: ',''));
+    var thanhTien = 0
+    if( sodienused>0 && sodienused <= 50){
+        thanhTien = sodienused * 1.678;
+        alert('so tien can thanh toan la: ' +thanhTien);
+    }else if (sodienused > 50 && sodienused <=100 ){
+        thanhTien = sodienused * 1.734;
+        alert('so tien can thanh toan la: ' +thanhTien);
+    }else  if (sodienused > 100 && sodienused <= 200){
+        thanhTien = sodienused * 2.014;
+        alert('so tien can thanh toan la: ' +thanhTien);
+    }else  if (sodienused > 200 && sodienused <= 300){
+        thanhTien = sodienused * 2.536;
+        alert('so tien can thanh toan la: ' +thanhTien);
+    }else  if (sodienused > 300 && sodienused <= 400) {
+        thanhTien = sodienused * 2.834;
+        alert('so tien can thanh toan la: ' + thanhTien);
+    }else  if (sodienused > 400) {
+        thanhTien = sodienused * 2.972;
+        alert('so tien can thanh toan la: ' + thanhTien);
+    }
+</script>
+</body>
+</html>
