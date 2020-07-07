@@ -6,41 +6,58 @@
     <link rel="stylesheet" href="bai8.css">
 </head>
 <body>
-
-<div>
-    <table border="1" style="margin: auto" >
+<form>
+    <table  style="margin: auto">
         <tr>
             <td>
                 <button class="switch" type="button"  onclick="start()">Start</button>
             </td>
             <td>
-                <button class="switch" type="reset" onclick="reset()">Reset</button>
+                <input type="reset" value="Reset" class="switch" onclick="changeReset()">
+                <button type="button" onclick="random()" class="switch">Random</button>
             </td>
         </tr>
     </table>
 
-    <table style="background: aliceblue" >
-        <form>
+    <table style="margin: auto" >
             <tr>
                 <td> Nhập vào giá trị cần đoán<br>
-                    <input class="khungchu" type="text" disabled id="nhapgiatri">
+                    <div id="nhapgiatri"><input class="khungchu" type="text" disabled ></div>
+                </td>
+                <td> Giá trị random của máy tính là <br>
+                    <div id="random">
+                        <input  type="text" disabled class="khungchu">
+                    </div>
                 </td>
             </tr>
-        </form>
     </table>
+</form>
 
-
-    
-</div>
 
 </body>
 <script>
-  document.getElementById('nhapgiatri').innerText = 'hello'
+
     function start() {
+        var a =document.getElementById('nhapgiatri').innerHTML = prompt('nhập vào số bạn đoán ( <= 99 )      : ','');
+        while ( a > 99){
+            alert('vui long nhap lai (>99)');
 
+            if (a === b){
+                alert('xin chuc mừng bạn đã đoán trúng phóc !');
+                return start();
+            }
+        }
     }
-    function reset() {
 
+
+    function random() {
+        var b = document.getElementById('random').innerHTML = Math.floor(Math.random()*(100-11)+11);
     }
+    function changeReset() {
+        document.getElementById('nhapgiatri').innerHTML = '<input class="khungchu" type="text" disabled >' ;
+        document.getElementById('random').innerHTML = '<input  type="text" disabled class="khungchu">';
+    }
+
+
 </script>
 </html>

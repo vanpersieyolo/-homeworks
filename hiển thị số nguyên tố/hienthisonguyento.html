@@ -6,20 +6,29 @@
 </head>
 <body>
     <script>
-        function soNguyenTo() {
-            var nhapSo = parseInt(prompt('nhap vao 1 gia tri de kiem tra: '));
-            var count = 0;
-             for(var i = 2; i < nhapSo; i++){
-                 count = i;
-                 while (count % i !=0 ){
+        var nhapso = +prompt('nhap vao so N: ','');
+        var demSo = 0;
+        var number = 1;
+        while (demSo <= nhapso){
+            if (prime(number)){
+                demSo++;
+                document.write(number+' ');
 
-                 }
-                 document.write(count);
-
-             }
+            }
+            number++;
         }
 
-        soNguyenTo();
+      function prime(number) {
+          if (number < 2 ){
+              return false;
+          }
+          for (let i = 2; i <= Math.sqrt(number); i++){
+              if (number % i == 0){
+                  return false;
+              }
+           }return  true;
+      }
+
     </script>
 </body>
 </html>
