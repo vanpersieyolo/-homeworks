@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<div >
+    mảng sau khi thực thi:
+    <input type='text' id="thuchien" >
+</div>
+<input type="button" value="xóa phần tử" onclick="deleteitem()">
+<input type="button" value="printf item" onclick="printf()">
+<input type="button" value="add item" onclick="additem()">
+<input type="reset" value="reset" onclick="resetText()">
+
+<br>
+
+</body>
+<script>
+    var testArray = [1,2,3,4,5,6,7,8,9,10];
+    function display(testArray) {
+        let a = "";
+        for (let i = 0; i <testArray.length; i++) {
+
+        } a += testArray;
+       return a;
+    }
+
+    function deleteitem() {
+        var x = prompt('phan tu bat dau xoa: ');
+        var y = prompt('so phan tu xoa di: ');
+        testArray.splice(x,y);
+        printf();
+
+    }
+
+    function additem() {
+        var additiem = prompt(' nhap vao gia tri can add: ');
+        testArray.push(additiem);
+        printf();
+
+
+    }
+    function printf() {
+        document.getElementById('thuchien').value = display(testArray);
+    }
+    function resetText() {
+        document.getElementById('thuchien').value = '';
+    }
+
+
+</script>
+</html>

@@ -15,6 +15,7 @@
             <td>
                 <input type="reset" value="Reset" class="switch" onclick="changeReset()">
                 <button type="button" onclick="random()" class="switch">Random</button>
+                <button type="button" onclick="doikhoanggiatri()" class="switch">đổi khoảng giá trị</button>
             </td>
         </tr>
     </table>
@@ -33,29 +34,50 @@
     </table>
 </form>
 
+<center>
+    <h1>HƯỚNG DẪN</h1><br>
+    <h2>bước 1: chọn nut đổi khoảng giá tri</h2>
+    <h2>bước 2: chọn nút start</h2>
+    <h2>bước 3: chọn nút random </h2>
+</center>
 
 </body>
 <script>
+    var dauLon = 0;
+    var dauBe = 0;
+    var inrandom = 0
+    function doikhoanggiatri() {
+        dauLon = +prompt('nhap gia tri lon','');
+        dauBe = +prompt('nhap gia tri be','');
+    }
 
     function start() {
-        var a =document.getElementById('nhapgiatri').innerHTML = prompt('nhập vào số bạn đoán ( <= 99 )      : ','');
+
+        var a = document.getElementById('nhapgiatri').innerHTML = +prompt('nhap gia tri so sanh random');
         while ( a > 99){
             alert('vui long nhap lai (>99)');
 
-            if (a === b){
-                alert('xin chuc mừng bạn đã đoán trúng phóc !');
                 return start();
             }
-        }
+
     }
 
 
     function random() {
-        var b = document.getElementById('random').innerHTML = Math.floor(Math.random()*(100-11)+11);
+
+        inrandom = document.getElementById('random').innerHTML = Math.floor(Math.random()*(dauLon-dauBe)+dauBe);
+        if (dauLon ==0 && dauBe ==0){
+            alert('vui long nhap khoang random');
+        }
     }
     function changeReset() {
+
         document.getElementById('nhapgiatri').innerHTML = '<input class="khungchu" type="text" disabled >' ;
         document.getElementById('random').innerHTML = '<input  type="text" disabled class="khungchu">';
+
+    }
+    if (inrandom == a){
+        document.write('<h1>'+ 'chuc mung ban da nhan dc 1 ty dong'+'</h1>');
     }
 
 
