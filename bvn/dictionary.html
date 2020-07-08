@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> từ điển</title>
+    <link rel="stylesheet" href="dictionary.css">
+</head>
+<body >
+    <header>
+        <center>
+            <h1 style="color: white">DICTIONARY</h1>
+            <br>
+        </center>
+    </header>
+
+    <table>
+        <tr>
+            <th>
+                <div>
+                    <select>
+                        <option id="vietnam">Vietnamese</option>
+                        <option id="anh">English</option>
+                        <option id="nhatban">Japanese</option>
+                    </select>
+                </div>
+            </th>
+            <th>
+                <div>
+                    <select>
+                        <option id="tiengviet">Vietnamese</option>
+                        <option id="tienganh">English</option>
+                        <option id="tiengnhat">Japanese</option>
+                    </select>
+                </div>
+            </th>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="text" class="khungViet" id="needTr">
+            </td>
+
+            <td>
+                <input id="andauboi" type="text" class="khungViet" disabled>
+            </td>
+        </tr>
+
+    </table>
+    <br>
+   <button class="nutDich" style="background: brown" type="button" onclick="translate()">Dịch</button>
+</body>
+</html>

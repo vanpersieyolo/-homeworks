@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai8.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bvn/dictionary.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bvn/dictionary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bvn/dictionary.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai7.html" beforeDir="false" afterPath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai7.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -61,6 +63,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BV LAPTOP\Desktop\bai ve nha\bvn" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="bai 1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/bai ve nha/thực hành vòng lặp do - while/bai 1.html" useBuiltInWebServerPort="true">
@@ -103,6 +110,8 @@
       <workItem from="1593954111879" duration="9106000" />
       <workItem from="1593966985623" duration="26000" />
       <workItem from="1594049266053" duration="6667000" />
+      <workItem from="1594127161053" duration="1318000" />
+      <workItem from="1594221964120" duration="5114000" />
     </task>
     <servers />
   </component>
@@ -170,9 +179,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="758" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594049968151" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594053351924">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594223879784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594053351924" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594223879784" />
   </component>
 </project>
