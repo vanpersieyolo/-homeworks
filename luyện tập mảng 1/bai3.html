@@ -9,15 +9,23 @@
         var soNguyen = [112,43,6,434,5,654,34,34,5,43];
         var max = soNguyen[0];
         var tong = 0;
+        var trungBinh = 0;
+        var count = 1;
+        var sum = 0
         for (let i = 0; i <soNguyen.length ; i++) {
+            count++;
+            sum += soNguyen[i];
             if (max < soNguyen[i]){
                 max = soNguyen[i];
 
             }tong += soNguyen[i];
 
         }
+        trungBinh = sum / count;
         document.write(max + ' la so lon nhat trong mang <br>');
-        document.write(tong + ' la tong cac so trong mang');
+        document.write(tong + ' la tong cac so trong mang<br>');
+        document.write(trungBinh +" là trung bình cộng các số hạng trong mảng");
+
     </script>
 </body>
 </html>

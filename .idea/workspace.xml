@@ -20,15 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Array/bai1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyện tập vòng lặp 2/bai1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyện tập vòng lặp 2/bai2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyện tập vòng lặp 2/bai3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyện tập vòng lặp 2/bai4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyện tập vòng lặp 2/hinhvuong.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai7.html" beforeDir="false" afterPath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai8.html" beforeDir="false" afterPath="$PROJECT_DIR$/bài tập luyện tập vòng lăp 1/bai8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hiển thị số nguyên tố/hienthisonguyento.html" beforeDir="false" afterPath="$PROJECT_DIR$/hiển thị số nguyên tố/hienthisonguyento.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/luyện tập mảng 1/bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/luyện tập mảng 1/bai6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luyện tập mảng 1/bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/luyện tập mảng 1/bai3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luyện tập mảng 1/bai4.html" beforeDir="false" afterPath="$PROJECT_DIR$/luyện tập mảng 1/bai4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luyện tập mảng 1/bài 1.html" beforeDir="false" afterPath="$PROJECT_DIR$/luyện tập mảng 1/bài 1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +35,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -116,6 +113,7 @@
       <workItem from="1594049266053" duration="6667000" />
       <workItem from="1594127161053" duration="1318000" />
       <workItem from="1594221964120" duration="5284000" />
+      <workItem from="1594307788722" duration="7427000" />
     </task>
     <servers />
   </component>
