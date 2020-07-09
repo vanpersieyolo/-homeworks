@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title> từ điển</title>
     <link rel="stylesheet" href="dictionary.css">
+
 </head>
 <body >
     <header>
@@ -17,16 +18,16 @@
         <tr>
             <th>
                 <div>
-                    <select>
+                    <select id="choice1">
                         <option id="vietnam">Vietnamese</option>
                         <option id="anh">English</option>
-                        <option id="nhatban">Japanese</option>
+                        <option id="nhatban" >Japanese</option>
                     </select>
                 </div>
             </th>
             <th>
                 <div>
-                    <select>
+                    <select id="choice2">
                         <option id="tiengviet">Vietnamese</option>
                         <option id="tienganh">English</option>
                         <option id="tiengnhat">Japanese</option>
@@ -41,12 +42,13 @@
             </td>
 
             <td>
-                <input id="andauboi" type="text" class="khungViet" disabled>
+                <input id="disp" type="text" class="khungViet" disabled>
             </td>
         </tr>
 
     </table>
     <br>
-   <button class="nutDich" style="background: brown" type="button" onclick="translate()">Dịch</button>
+   <button class="nutDich" style="background: brown" type="button" onclick="transL()">Dịch</button>
 </body>
+<script src="dictionary.js"></script>
 </html>

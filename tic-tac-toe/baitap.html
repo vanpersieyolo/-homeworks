@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>co caro</title>
+    <link rel="stylesheet" href="baitap.css">
+</head>
+<body>
+
+<button class="switchxo" id="x"><h1>X</h1></button>
+<button class="switchxo" id="o"><h1>O</h1></button>
+<center><input type="button" value="Start" class="switchxo" onclick="taobang()"></center>
+<br>
+
+<h3>nhập vào giá trị số ô muốn đánh</h3>
+dài: <input type="text" class="inpXO" id="dai">
+rộng:<input type="text" class="inpXO" id="rong">
+<div>
+    <center>
+        <form>
+            <h1>TIC - TAC - TOE</h1>
+        </form>
+
+    </center>
+</div>
+<center>
+    <div id="renderhere"></div>
+</center>
+<script>
+    function taobang(dai,rong) {
+        var render = "<table border='1'  cellspacing='3' cellpadding='3'>";
+        var dai = document.getElementById('dai').value;
+        var rong = document.getElementById('rong').value;
+
+
+        for (let i = 0; i < dai; i++) {
+            render += "<tr>";
+            for (let j = 0; j < rong ; j++) {
+                var idd = i + j;
+                render += "<td>";
+                render += "<button class='clickchess' onclick= 'hienThi()' name='van'></button></td>";
+            }render += '</tr>';
+        }
+        render += "</table>";
+        document.getElementById('renderhere').innerHTML = render;
+    }
+    function hienThi(id,j,i) {
+       if (document.getElementsByName('van') =
+        }
+    }
+
+
+</script>
+</body>
+</html>
