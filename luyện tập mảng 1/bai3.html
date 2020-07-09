@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+        <script>
+        var soNguyen = [112,43,6,434,5,654,34,34,5,43];
+        var max = soNguyen[0];
+        var tong = 0;
+        for (let i = 0; i <soNguyen.length ; i++) {
+            if (max < soNguyen[i]){
+                max = soNguyen[i];
+
+            }tong += soNguyen[i];
+
+        }
+        document.write(max + ' la so lon nhat trong mang <br>');
+        document.write(tong + ' la tong cac so trong mang');
+    </script>
+</body>
+</html>
