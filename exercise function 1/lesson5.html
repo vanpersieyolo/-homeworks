@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson 5</title>
+</head>
+<body>
+<script>
+    var nameStar = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    var chomSaoch = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    var khongco = 'khong co ngoi sao';
+    function checkStar(strval) {
+        strval = prompt('nhap vao gia tri chuoi:','');
+        for (let i = 0; i <nameStar.length ; i++) {
+            if (strval === nameStar[i]){
+                alert(chomSaoch[i]);
+                break;
+            }
+        }return true;
+        if (true){
+            alert(khongco);
+        }
+
+    }
+    checkStar();
+</script>
+</body>
+</html>
