@@ -20,15 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/exercise function 2/bai6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercise function 2/lesson4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercise function 2/lesson5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercise function 2/lesson7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercise function 2/lesson8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercise function 2/lesson9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ung dung quan li sp/add.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ung dung quan li sp/ungdungquanlisp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bài tập sinh bảng cửu chương/bangcuuchuong.html" beforeDir="false" afterPath="$PROJECT_DIR$/bài tập sinh bảng cửu chương/bangcuuchuong.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tic-tac-toe/baitap.html" beforeDir="false" afterPath="$PROJECT_DIR$/tic-tac-toe/baitap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise function 2/lesson9.html" beforeDir="false" afterPath="$PROJECT_DIR$/exercise function 2/lesson9.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +33,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -119,7 +114,7 @@
       <workItem from="1594307788722" duration="7493000" />
       <workItem from="1594338066536" duration="347000" />
       <workItem from="1594491308092" duration="1096000" />
-      <workItem from="1594562944658" duration="3876000" />
+      <workItem from="1594562944658" duration="9296000" />
     </task>
     <servers />
   </component>

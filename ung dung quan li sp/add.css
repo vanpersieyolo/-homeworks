@@ -1,0 +1,17 @@
+.swichapply{
+    border: 1px;
+    border-color: black;
+    background-color: chartreuse;
+    width: 90px;
+    height: 20px;
+}
+tr{
+    width: 500px;
+    height: 50px;
+    margin: auto;
+    background-color: antiquewhite;
+}
+td{
+    width: 200px;
+    height: 30px;
+}
