@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>met sang feet</title>
+</head>
+<body>
+    <script>
+        function onChangeMtoF(met) {
+            let feet = met * 3.279;
+            return feet;
+        }
+
+        function onChangeFtoM(feet) {
+            let met = feet * 0.305;
+            return met;
+        }
+
+        var ip = prompt('nhap vao du lieu chuyen doi mtof or ftom: ')
+        if (ip === 'mtof'){
+            met = prompt('nhap vao gia tri met:');
+            var a = onChangeMtoF(met);
+            alert(a);
+        }else if (ip ==='ftom'){
+            feet = prompt('nhap vao gia tri feet');
+             b = onChangeFtoM(feet);
+             alert(b);
+
+        }
+
+
+    </script>
+</body>
+</html>
