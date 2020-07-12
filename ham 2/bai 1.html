@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+    <script>
+        var number = prompt('nhap vao so 1000:','');
+        let array = []
+        function isPrime(number) {
+            for (let i = 2; i <= number; i++) {
+                if (i % Math.sqrt(i) !== 0){
+                    array.push(i);
+                }
+            }return array
+        }
+        document.write(isPrime(number));
+
+
+    </script>
+</body>
+</html>
