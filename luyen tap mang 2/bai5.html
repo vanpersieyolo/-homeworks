@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+</head>
+<body>
+    <script>
+        var str1 =prompt('nhap vao chuoi 1: ',);
+        var str2 = prompt('nhap vao chuoi 2: ',);
+        var ar1 = str1.split(" ");
+        var ar2 = str2.split(" ");
+        var test = true;
+
+        if (ar1.length == ar2.length){
+            for (let i = 0; i < ar1.length; i++) {
+                if (ar1[i] === ar2[i]){
+                    test = true;
+                }else{
+                    test = false;
+                    break;
+                }
+
+            }
+            if (test ==true){
+                alert('2 mang bang nhau');
+            }else alert("sai me roi");
+        }else alert('deo giong roi');
+
+
+
+
+    </script>
+</body>
+</html>

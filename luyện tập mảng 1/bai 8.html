@@ -5,10 +5,18 @@
     <title>bai 8</title>
 </head>
 <body>
-    <script>
-        var nhapVao = parseInt(prompt('nhap vao cac gia tri;'));
-        var array1 = [];
-        array1 = nhapVao.split
-    </script>
+<script>
+    var nhapVao = prompt('nhap vao cac gia tri;');
+    var array12= [];
+
+    array12= nhapVao.split(" ");
+    array12.sort(function (a,b) {
+        return (a -b);
+    })
+
+    document.write(array12);
+</script>
+
+
 </body>
 </html>
