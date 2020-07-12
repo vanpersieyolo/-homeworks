@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson 9</title>
+</head>
+<body>
+    <script>
+        function checkItem(array01) {
+
+            let inputitem = prompt('nhap vao 1 chuoi ki tu: ','');
+            array01 = inputitem.split(" ")
+            let count = 0;
+            let item1 = prompt('nhap vao 1 ki tu bat ki bat ki: ');
+
+            for (let i = 0; i < array01.length; i++) {
+                if (array01[i] === item1) {
+                    count++;
+            }
+                alert(count);
+
+            }
+        }
+        checkItem();
+
+
+    </script>
+</body>
+</html>

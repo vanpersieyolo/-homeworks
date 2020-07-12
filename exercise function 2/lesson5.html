@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson 5</title>
+</head>
+<body>
+    <script>
+        function checkMin(nhapvao2) {
+          let arr11 = [];
+            nhapvao2 = prompt('nhap vao cac gia tri: ');
+            arr11 = nhapvao2.split(" ");
+            let min = arr11[0];
+            for (let i = 0; i < arr11.length ; i++) {
+                if (arr11[i] < min);
+                min = arr11[i];
+                alert('so nho nhat la: '+min);
+            }
+        }
+        checkMin();
+    </script>
+</body>
+</html>
