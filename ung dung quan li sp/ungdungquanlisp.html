@@ -5,29 +5,68 @@
     <title>ung dung quan li sp</title>
     <link rel="stylesheet" href="add.css">
 </head>
-<body>
+<body background="background2.jpg">
 <div>
     <h2>Add new product</h2>
-    <input type="text" id="nhapvao" >
-    <button type="button" class="swichapply" onclick="addpj()">ADD</button>
+    <div class="formbegin">
+        <input type="text" id="nhapvaostring" class="hd1" >
+        <button type="button" class="swichapply" onclick="addinArray()">ADD</button>
+    </div>
     <h2>Display product</h2>
     <h4>product name</h4>
-
-
-
 </div>
+<div id="displaytable"></div>
     <script>
-        let sout;
-        sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
-        for (i = 1; i <= 9; i++) {
-            sout = sout + "<tr>";
-            for (j = 1; j <= 3; j++) {
-                sout = sout + "<td>" +"<button class='swichapply'></button>" +"</td>";
+        var productstore = ['QUẦN','ÁO','GIẦY','DÉP','MŨ','TÚI XÁCH'];
+
+        function displaySt() {
+            let sout;
+            sout = "<table border='0' cellspacing='0' cellpadding='3'>"
+            for (i = 0; i < productstore.length; i++) {
+
+                if (i % 2 == 0){
+                    sout = sout + '<tr style="background-color: white">';
+                }else {
+                    sout = sout + '<tr style="background-color: darkgray">';
+                }
+
+                for (j = 1; j <= 3; j++) {
+
+                    if (j == 1){
+                        sout = sout + "<td id='giatri' style='text-align: center'>"+ productstore[i] +'</td>';
+                    }
+                    if (j == 2){
+                        sout = sout + "<td>"+ '<center><button class="swichapply" onclick="editproduct('+i+')">'+'EDIT'+'</button></center>'+'</td>';
+                    }
+                    if (j == 3){
+                        sout = sout + "<td>"+ '<center><button class="swichapply" onclick="deleteProduct('+i+')"">'+'DELETE'+'</button></center>'+'</td>';
+                    }
+
+                }
+                sout = sout + "</tr>";
             }
-            sout = sout + "</tr>";
+            sout = sout + "</table>";
+            document.getElementById("displaytable").innerHTML=sout;
         }
-        sout = sout + "</table>";
-        document.write(sout);
+        displaySt(productstore);
+        
+        function addinArray() {
+            document1 = document.getElementById('nhapvaostring').value;
+            productstore.push(document1);
+            document.getElementById('nhapvaostring').value = '';
+            displaySt(productstore);
+        }
+        
+        function deleteProduct(i) {
+            productstore.splice(i,1);
+            displaySt();
+        }
+        function editproduct(i) {
+            let ipname = prompt('nhap vao ten sp: ');
+            productstore.splice(i,1,ipname);
+            displaySt();
+        }
+
 
     </script>
 </body>
