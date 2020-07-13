@@ -1,7 +1,6 @@
 .swichapply{
-    border: 4px;
-    border-color: floralwhite;
-    background-color: deepskyblue;
+    border: solid red ;
+
     width: 90px;
     height: 40px;
     border-radius: 15px;
