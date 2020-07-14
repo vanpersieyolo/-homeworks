@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>snake</title>
+    <link rel="stylesheet" href="snake.css">
 </head>
 <body onload="docReady()">
 <canvas id="myCanvas" width="1368px" height="768px" style="border:5px solid coral"></canvas>
+<button class="khung" onclick="startGame()">START</button>
+
 </body>
 <script>
     var ctx = document.getElementById("myCanvas").getContext("2d");
@@ -44,19 +47,19 @@
     }
 
     function moveleftCircle(){
-        circlehead.pos1= circlehead.pos1 - 10;
+        circlehead.pos1= circlehead.pos1 -5;
         circlehead.printfCircle()
     }
     function moverightCircle(){
-        circlehead.pos1 = circlehead.pos1  + 10;
+        circlehead.pos1 = circlehead.pos1  + 5;
         circlehead.printfCircle();
     }
     function moveupCircle (){
-        circlehead.pos2 = circlehead.pos2  - 10;
+        circlehead.pos2 = circlehead.pos2  - 5;
         circlehead.printfCircle();
     }
     function movedownCircle (){
-        circlehead.pos2 = circlehead.pos2  + 10;
+        circlehead.pos2 = circlehead.pos2  + 5;
         circlehead.printfCircle();
     }
 
@@ -68,6 +71,31 @@
     function docReady() {
         window.addEventListener('keydown',moveclick);
     }
+
+
+    let squ = function Square(canhA) {
+        this.canhA = canhA;
+
+        this.SquareOnTable = function () {
+            ctx.beginPath();
+            ctx.rect(Math.random()*600, Math.random()*600, canhA, canhA);
+            ctx.fill() ;
+        }
+    }
+
+    let square = new Square(20);
+    let CanhA = square.SquareOnTable();
+    // var c = document.getElementById("myCanvas");
+    // var ctx = c.getContext("2d");
+    // ctx.beginPath();
+    // ctx.rect(Math.random()*500, Math.random()*500, 40, 40);
+    // ctx.fill();
+    // function startGame() {
+
+    }
+
+
+
 
 
 
