@@ -6,7 +6,25 @@
 </head>
 <body>
     <script>
+        let temper = function (doC, doF, doK) {
+            this.doC = doC;
+            this.doF = doF;
+            this.doK = doK;
 
+            this.doCtodof = function () {
+                return doF = (doC * 1.8) + 32;
+            }
+
+            this.doCtodoK = function () {
+                return doK = doC * 273.15;
+            }
+        }
+        let doc = new temper(25,0,0);
+
+        let dof = doc.doCtodof();
+        let dok = doc.doCtodoK();
+
+        alert('do f = ' + dof+"____"+"do k = "+dok);
     </script>
 </body>
 </html>

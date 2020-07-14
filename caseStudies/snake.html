@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>snake</title>
+</head>
+<body onload="docReady()">
+<canvas id="myCanvas" width="1368px" height="768px" style="border:5px solid coral"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById("myCanvas").getContext("2d");
+    function CircleHead(pos1,pos2,rad) {
+        this.pos1 = pos1;//ngang
+        this.pos2 = pos2;//dọc
+        this.rad= rad;
+
+        this.printfCircle = function () {
+            ctx.clearRect(0,0,1368,768);
+            ctx.beginPath();
+            ctx.arc(this.pos1,this.pos2,this.rad,0,2*Math.PI);
+            ctx.fill();
+            ctx.closePath();
+        }
+    }
+
+    var Pos1 = 90;
+    var Pos2 = 40;
+    let circlehead =new CircleHead(Pos1,Pos2,20);
+    function moveclick(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                moveleftCircle();
+                break;
+            case 39:
+                moverightCircle();
+                break;
+            case 38:
+                moveupCircle();
+                break;
+            case 40:
+                movedownCircle();
+                break;
+        }
+    }
+
+    function moveleftCircle(){
+        circlehead.pos1= circlehead.pos1 - 10;
+        circlehead.printfCircle()
+    }
+    function moverightCircle(){
+        circlehead.pos1 = circlehead.pos1  + 10;
+        circlehead.printfCircle();
+    }
+    function moveupCircle (){
+        circlehead.pos2 = circlehead.pos2  - 10;
+        circlehead.printfCircle();
+    }
+    function movedownCircle (){
+        circlehead.pos2 = circlehead.pos2  + 10;
+        circlehead.printfCircle();
+    }
+
+
+
+
+
+    circlehead.printfCircle();
+    function docReady() {
+        window.addEventListener('keydown',moveclick);
+    }
+
+
+
+
+</script>
+</html>

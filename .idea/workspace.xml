@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ung dung quan li sp/add.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ung dung quan li sp/ungdungquanlisp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caseStudies/snake.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercise function 2/lesson9.html" beforeDir="false" afterPath="$PROJECT_DIR$/exercise function 2/lesson9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temperature/temperature.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/temperature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuchanhsukienbanphim.html" beforeDir="false" afterPath="$PROJECT_DIR$/thuchanhsukienbanphim.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -114,7 +114,9 @@
       <workItem from="1594307788722" duration="7493000" />
       <workItem from="1594338066536" duration="347000" />
       <workItem from="1594491308092" duration="1096000" />
-      <workItem from="1594562944658" duration="9296000" />
+      <workItem from="1594562944658" duration="9987000" />
+      <workItem from="1594649576641" duration="1463000" />
+      <workItem from="1594732390205" duration="11330000" />
     </task>
     <servers />
   </component>
@@ -182,6 +184,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="758" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594049968151" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1594738571616">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594738571616" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594223879784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
