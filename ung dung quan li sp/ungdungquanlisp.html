@@ -49,14 +49,14 @@
             document.getElementById("displaytable").innerHTML=sout;
         }
         displaySt(productstore);
-        
+
         function addinArray() {
             document1 = document.getElementById('nhapvaostring').value;
             productstore.push(document1);
             document.getElementById('nhapvaostring').value = '';
             displaySt(productstore);
         }
-        
+
         function deleteProduct(i) {
             productstore.splice(i,1);
             displaySt();
