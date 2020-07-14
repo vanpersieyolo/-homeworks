@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mobile</title>
+    <link rel="stylesheet" href="mobile.css">
+</head>
+    <body>
+        <h2>NokiA</h2><br/>
+            %pin: <input type="text" disabled class="khung"/><br/><br/>
+            soạn tin nhắn: <textarea id="soantinnhan"></textarea><br/><br/>
+            Lưu tin nhắn hộp thư đến: <input type="text" disabled class="khung"><br/><br/>
+            Lưu tin nhắn đã gửi: <input type="text" disabled class="khung"><br/><br/>
+            Sạc pin điện thoại: đang sạc <input type="checkbox" id="sạc pin"><br/><br/>
+            Soạn tin nhắn: <textarea class="khung" placeholder="nhập vào tin nhắn"></textarea><br/><br/>
+            Tin nhắn đến : <textarea class="khung" id="inbox" disabled></textarea><br/><br/>
+            Gửi tin đã soạn đến mobile khác: <input type="button" value="Send" onclick="takingMes()"><br/><br/><br/><br/>
+            kiểm tra on - off: on: <input type="checkbox" id="on">----off <input type="checkbox" id="off"><br/><br/><br/><br/>
+
+
+
+        <h2>Iphone</h2><br/>
+        %pin: <input type="text" disabled class="khung"/><br/><br/>
+        soạn tin nhắn: <textarea></textarea><br/><br/>
+        Lưu tin nhắn hộp thư đến: <input type="text" disabled class="khung" id="nhanve"><br/><br/>
+        Lưu tin nhắn đã gửi: <input type="text" disabled class="khung"><br/><br/>
+        Sạc pin điện thoại: đang sạc <input type="checkbox" id="sạc pin1"><br/><br/>
+        Soạn tin nhắn: <textarea class="khung" placeholder="nhập vào tin nhắn"></textarea><br/><br/>
+        Tin nhắn đến : <textarea class="khung" id="inbox1" disabled></textarea><br/><br/>
+        Gửi tin đã soạn đến mobile khác: <input type="button" value="Send"><br/><br/><br/><br/>
+        kiểm tra on - off: on: <input type="checkbox" id="on1">----off <input type="checkbox" id="pff">
+
+
+</body>
+<script>
+    let mobile = function (sendSwith) {
+        // battery,notespace,inboxArea,sendArea,checkOn_Off,charge,texting,takingSMS,findMess,energyUsed,Online,
+        // this.battery = battery;
+        // this. notespace = notespace;
+        // this.inboxArea = inboxArea;
+        // this.sendArea = sendArea;
+        // this.checkOn_Off = checkOn_Off;
+        // this. charge = charge;
+        // this.texting = texting;
+        // this.takingSMS = takingSMS;
+        // this.findMess = findMess;
+        // this.energyUsed = energyUsed;
+        // this.Online = Online;
+        this.sendswith = sendSwith;
+
+
+
+        let takingMes = function () {
+            document.getElementById('nhanve').innerHTML = ocument.getElementById('soantinnhan').value;
+        }
+    }
+
+    let phone  = new mobile()
+</script>
+</html>
