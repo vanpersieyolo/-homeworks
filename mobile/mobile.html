@@ -7,54 +7,91 @@
 </head>
     <body>
         <h2>NokiA</h2><br/>
-            %pin: <input type="text" disabled class="khung"/><br/><br/>
-            soạn tin nhắn: <textarea id="soantinnhan"></textarea><br/><br/>
-            Lưu tin nhắn hộp thư đến: <input type="text" disabled class="khung"><br/><br/>
-            Lưu tin nhắn đã gửi: <input type="text" disabled class="khung"><br/><br/>
-            Sạc pin điện thoại: đang sạc <input type="checkbox" id="sạc pin"><br/><br/>
-            Soạn tin nhắn: <textarea class="khung" placeholder="nhập vào tin nhắn"></textarea><br/><br/>
-            Tin nhắn đến : <textarea class="khung" id="inbox" disabled></textarea><br/><br/>
-            Gửi tin đã soạn đến mobile khác: <input type="button" value="Send" onclick="takingMes()"><br/><br/><br/><br/>
-            kiểm tra on - off: on: <input type="checkbox" id="on">----off <input type="checkbox" id="off"><br/><br/><br/><br/>
+            %pin: <input type="text" disabled class="khung" id="trangthaipin"/><br/><br/>
+            Lưu tin nhắn hộp thư đến: <textarea disabled class="khung" id="luutinnhanden" ></textarea><br/><br/>
+            Lưu tin nhắn đã gửi: <textarea disabled class="khung" ></textarea><br/><br/>
+            Sạc pin điện thoại: đang sạc <input type="button" value="Charge" onclick="chargeB()" ><br/><br/>
+            Soạn tin nhắn: <textarea class="khung" placeholder="nhập vào tin nhắn"  ></textarea><br/><br/>
+            Tin nhắn đến : <textarea class="khung" disabled id="tinnhanden"></textarea><input type="button" value="READ" onclick="onS()"><br/><br/>
+            Gửi tin đã soạn đến mobile khác: <input type="button" value="Send" ><br/><br/><br/><br/>
+            kiểm tra on - off: on:<select id="stt"><option value="on">ON</option><br><option value="off">OFF</option></select><br/><br/><br/><br/>
 
 
 
         <h2>Iphone</h2><br/>
-        %pin: <input type="text" disabled class="khung"/><br/><br/>
-        soạn tin nhắn: <textarea></textarea><br/><br/>
+        %pin: <input type="text" disabled class="khung" /><br/><br/>
         Lưu tin nhắn hộp thư đến: <input type="text" disabled class="khung" id="nhanve"><br/><br/>
-        Lưu tin nhắn đã gửi: <input type="text" disabled class="khung"><br/><br/>
+        Lưu tin nhắn đã gửi: <textarea disabled class="khung" id="luutinnhandi" ></textarea><br/><br/>
         Sạc pin điện thoại: đang sạc <input type="checkbox" id="sạc pin1"><br/><br/>
-        Soạn tin nhắn: <textarea class="khung" placeholder="nhập vào tin nhắn"></textarea><br/><br/>
+        Soạn tin nhắn: <textarea class="khung" placeholder="nhập vào tin nhắn" id="soantin" ></textarea><br/><br/>
         Tin nhắn đến : <textarea class="khung" id="inbox1" disabled></textarea><br/><br/>
-        Gửi tin đã soạn đến mobile khác: <input type="button" value="Send"><br/><br/><br/><br/>
+        Gửi tin đã soạn đến mobile khác: <input type="button" value="Send" onclick="onC()" ><br/><br/><br/><br/>
         kiểm tra on - off: on: <input type="checkbox" id="on1">----off <input type="checkbox" id="pff">
+
 
 
 </body>
 <script>
-    let mobile = function (sendSwith) {
-        // battery,notespace,inboxArea,sendArea,checkOn_Off,charge,texting,takingSMS,findMess,energyUsed,Online,
-        // this.battery = battery;
-        // this. notespace = notespace;
-        // this.inboxArea = inboxArea;
-        // this.sendArea = sendArea;
-        // this.checkOn_Off = checkOn_Off;
-        // this. charge = charge;
-        // this.texting = texting;
-        // this.takingSMS = takingSMS;
-        // this.findMess = findMess;
-        // this.energyUsed = energyUsed;
-        // this.Online = Online;
-        this.sendswith = sendSwith;
+    function Mobile () {
+        this.statuS = false;
+        this.trangthaipin = 100;
+        this.saveAreainbox = [];
+        this.saveAreasend = [];
+        this.Tinnhan = document.getElementById('soantin').value;
 
+        this.Pin  = function () {
+        document.getElementById("trangthaipin").value = this.trangthaipin;
+    }
 
+    this.Guintin = function () {
+        this.Tinnhan = document.getElementById('soantin').value;
+        document.getElementById("tinnhanden").value = this.Tinnhan;
+        this.trangthaipin--;
+    }
 
-        let takingMes = function () {
-            document.getElementById('nhanve').innerHTML = ocument.getElementById('soantinnhan').value;
+    this.savesend = function (){
+            this.saveAreainbox.push(document.getElementById('tinnhanden').value);
+            document.getElementById('luutinnhanden').innerHTML = this.saveAreainbox;
+        this.trangthaipin--;
+    }
+
+    this.saveS = function () {
+        this.saveAreasend.push(document.getElementById('soantin').value);
+        document.getElementById('luutinnhandi').innerHTML = this.saveAreasend;
+
+    }
+
+    this.Status = function () {
+        let stt = document.getElementById('stt').value;
+        if (stt == on){
+            return true;
+        }else {
+            return false;
         }
     }
 
-    let phone  = new mobile()
+    this.charge = function () {
+        document.getElementById('trangthaipin').value = 100;
+    }
+    }
+
+    var moBile = new Mobile();
+    moBile.Pin();
+    moBile.Status();
+    moBile.charge();
+    function onC() {
+        moBile.Guintin();
+        moBile.saveS();
+        moBile.Pin();
+    }
+
+    function onS() {
+        moBile.savesend();
+        moBile.Pin();
+    }
+
+    function chargeB() {
+        moBile.charge();
+    }
 </script>
 </html>

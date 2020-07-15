@@ -6,25 +6,48 @@
     <link rel="stylesheet" href="snake.css">
 </head>
 <body onload="docReady()">
-<canvas id="myCanvas" width="1368px" height="768px" style="border:5px solid coral"></canvas>
-<button class="khung" onclick="startGame()">START</button>
-
+<canvas id="myCanvas" width="1368px" height="768px" style=" border:5px solid coral"></canvas>
 </body>
 <script>
     var ctx = document.getElementById("myCanvas").getContext("2d");
-    function CircleHead(pos1,pos2,rad) {
+    function CircleHead(pos1,pos2,rad) { //class circle
         this.pos1 = pos1;//ngang
         this.pos2 = pos2;//dọc
         this.rad= rad;
+        this.dx = 2;
+        this.dy = 0;
 
-        this.printfCircle = function () {
+        this.printfCircle = function () {   //method circle
             ctx.clearRect(0,0,1368,768);
             ctx.beginPath();
             ctx.arc(this.pos1,this.pos2,this.rad,0,2*Math.PI);
             ctx.fill();
             ctx.closePath();
         }
+        this.moveSnake = function () {     //method move
+            this.pos1 = this.pos1 + this.dx;
+            this.pos2 = this.pos2 + this.dy;
+        }
+        this.linevacham = function () {
+            
+        }
+
     }
+    function Linevacham(m1,m2,m3,m4) {
+        this.m1 = m1;
+        this.m2 = m2;
+        this.m3 = m3;
+        this.m4 = m4;
+
+        this.drawline = function () {
+            ctx.beginPath();
+            ctx.moveTo(m1, m2);
+            ctx.lineTo(m3, m4);
+            ctx.stroke();
+        }
+    }
+    let linevacham = new Linevacham(Pos1,Pos2,this.toaDo1,this.toaDo2);
+    linevacham.drawline();
 
     var Pos1 = 90;
     var Pos2 = 40;
@@ -43,62 +66,64 @@
             case 40:
                 movedownCircle();
                 break;
+            case 32:
+                window.stop();
+                break;
         }
     }
 
+    function automove() {
+        circlehead.moveSnake();
+        circlehead.printfCircle();
+        squaree.SquareOnTable();
+        linevacham.drawline();
+    }
+    let timeID = setInterval(automove,10);
+
     function moveleftCircle(){
-        circlehead.pos1= circlehead.pos1 -5;
-        circlehead.printfCircle()
+        circlehead.dx= -2;
+        circlehead.dy=0;
+
     }
     function moverightCircle(){
-        circlehead.pos1 = circlehead.pos1  + 5;
-        circlehead.printfCircle();
+        circlehead.dx= +2;
+        circlehead.dy=0;
+
     }
     function moveupCircle (){
-        circlehead.pos2 = circlehead.pos2  - 5;
-        circlehead.printfCircle();
+        circlehead.dx= 0;
+        circlehead.dy= -2;
+
     }
     function movedownCircle (){
-        circlehead.pos2 = circlehead.pos2  + 5;
-        circlehead.printfCircle();
+        circlehead.dx= 0;
+        circlehead.dy= +2;
+
     }
-
-
-
-
-
+    function movepause (){
+        circlehead.dx = + 0;
+        circlehead.dy = + 0;
+    }
     circlehead.printfCircle();
     function docReady() {
         window.addEventListener('keydown',moveclick);
     }
 
 
-    let squ = function Square(canhA) {
-        this.canhA = canhA;
-
-        this.SquareOnTable = function () {
+    function Squaree(canhA,toado1,toado2) {
+        this.CanhA = canhA;
+        this.toaDo1 = toado1;
+        this.toaDo2 = toado2;
+        this.SquareOnTable = function() {
             ctx.beginPath();
-            ctx.rect(Math.random()*600, Math.random()*600, canhA, canhA);
+            ctx.rect( this.toaDo1,this.toaDo2,this.CanhA, this.CanhA);
             ctx.fill() ;
+
         }
-    }
-
-    let square = new Square(20);
-    let CanhA = square.SquareOnTable();
-    // var c = document.getElementById("myCanvas");
-    // var ctx = c.getContext("2d");
-    // ctx.beginPath();
-    // ctx.rect(Math.random()*500, Math.random()*500, 40, 40);
-    // ctx.fill();
-    // function startGame() {
 
     }
-
-
-
-
-
-
+    let squaree = new Squaree(40,Math.random()*600, Math.random()*600,);
+    squaree.SquareOnTable();
 
 </script>
 </html>
