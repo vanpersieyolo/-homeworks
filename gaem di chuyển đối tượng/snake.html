@@ -5,22 +5,19 @@
     <title>snake</title>
     <link rel="stylesheet" href="snake.css">
 </head>
-<body onload="docReady()">
+<body onload="docReady()" id="begin" >
 <table cellspacing="5" cellpadding="5">
-    <h1><center>TRUY TÌM CRUSH</center></h1>
+    <h1><center><img src="../header.PNG" height="95" width="501"/></center></h1>
     <tr >
-        <td><canvas id="myCanvas" width="1368px" height="768px" style=" border:10px solid black"  ></canvas></td>
+        <td id="canvasne"><canvas id="myCanvas" width="1368px" height="768px" style=" border:10px solid black"></canvas></td>
         <td>
             <h1>Crush của bạn có màu: </h1>
-            <canvas id="canvas1"width="100px" height="100px" style=" border:1px solid black"></canvas>
-            <h1>Điểm số:</h1>
-            <input class="khung" type="button" id="soccer">
+            <center id="canvas2"><canvas id="canvas1"width="100px" height="100px" style="border: 1px solid black"></canvas></center>
+            <h1>Score:</h1>
+            <input class="khung" type="text" disabled id="score"/><br>
         </td>
-        <td id="anhcrush">
-<!--            <img src="../anhngoctrinh.jpg" height="833" width="555"/>-->
-        </td>
+        <td id="anhcrush"></td>
     </tr>
-
 </table>
 </body>
 <script>
@@ -47,12 +44,12 @@
             this.pos1 = this.pos1 + this.dx;
             this.pos2 = this.pos2 + this.dy;
             if (this.pos1-this.rad == 0 || this.pos2-this.rad == 0 || this.pos1 +this.rad ==1388 || this.pos2 + this.rad == 788){
-                alert('thua roi');
-                document.getElementById('anhcrush').innerHTML =
+                document.getElementById('anhcrush').innerHTML ="<h1>Đây là crush của thí chủ</h1>"+"<img src=\"../tranducbo.jpg\" height=\"700\" width=\"600\"/>"
                 clearInterval(timeID);
 
             }
             if(this.accident(item)){
+                document.getElementById('anhcrush').innerHTML = '<img src="../ngoctrinh' + Math.floor(Math.random()*3+1) + '.jpg" height="900" width="600"/>'
                 squaree.randomPosi();
                 squaree1.randomPosi();
                 squaree2.randomPosi();
@@ -67,11 +64,9 @@
             let x = item.toaDo1 + 20;
             let y = item.toaDo2 + 20;
             if (Math.abs(this.pos1- x) < 1/2*(this.rad + 20) && Math.abs(this.pos2 - y) < 1/2*(this.rad + 20)){
-                item.toaDo1 = item.toaDo1+Math.random()*300 ;
-                item.toaDo2 = item.toaDo2+Math.random()*300 ;
-
+                item.toaDo1 = item.toaDo1+Math.random()*1000-200;
+                item.toaDo2 = item.toaDo2+Math.random()*1000 -200;
                 diemso++;
-
                 return true
             }else
             return false;
@@ -105,13 +100,14 @@
         circlehead.moveSnake(squaree);
         circlehead.printfCircle();
         squaree.SquareOnTable();
+        document.getElementById('score').value = diemso;
         squaree1.SquareOnTable();
         squaree2.SquareOnTable();
         squaree3.SquareOnTable();
         squaree4.SquareOnTable();
         squaree5.SquareOnTable();
         squaree6.SquareOnTable();
-        document.getElementById('soccer').value = diemso;
+
     }
     let timeID = setInterval(automove,5);
 
@@ -139,13 +135,13 @@
         window.addEventListener('keydown',moveclick);
     }
 
-    var colorCursh;
     function Squaree(canhA,toado1,toado2) {
         this.CanhA = canhA;
         this.toaDo1 = toado1;
         this.toaDo2 = toado2;
         var colorArr = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
         this.color = colorArr[Math.floor(Math.random() * 6 - 1)];
+
         this.SquareOnTable = function () {
             let ctx = document.getElementById("myCanvas").getContext("2d");
             ctx.beginPath();
@@ -168,36 +164,30 @@
                 this.toaDo1 = Math.random() * 600;
                 this.toaDo2 = Math.random() * 600;
             }
-            this.SquareTable = function () {
-                let ctx = document.getElementById("canvas1").getContext("2d");
-                ctx.beginPath();
-                ctx.rect(this.toaDo1, this.toaDo2, this.CanhA, this.CanhA);
-                ctx.fillStyle = colorCursh
-                ctx.fill();
-            }
 
         }
     }
+
     let squaree = new Squaree(40,Math.random()*600, Math.random()*600,);
-    colorCursh = this.color;
     squaree.SquareOnTable();
-    let squaree1 = new Squaree(40,Math.random()*600, Math.random()*600,);
+    let squaree1 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree1.SquareOnTable();
-    let squaree2 = new Squaree(40,Math.random()*600, Math.random()*600,);
+    let squaree2 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree2.SquareOnTable();
-    let squaree3 = new Squaree(40,Math.random()*600, Math.random()*600,);
+    let squaree3 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree3.SquareOnTable();
-    let squaree4= new Squaree(40,Math.random()*600, Math.random()*600,);
+    let squaree4= new Squaree(40,Math.random()*600, Math.random()*600);
     squaree4 .SquareOnTable();
-    let squaree5 = new Squaree(40,Math.random()*600, Math.random()*600,);
+    let squaree5 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree5.SquareOnTable();
-    let squaree6 = new Squaree(40,Math.random()*600, Math.random()*600,);
+    let squaree6 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree6.SquareOnTable();
-    let squacrush = new Squaree(100,0,0);
-    squacrush.SquareTable();
+    function reset1() {
+        document.getElementById('begin').reset();
+    }
 
 
 
 
-</script>
+    </script>
 </html>
