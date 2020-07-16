@@ -12,21 +12,21 @@
         <td><canvas id="myCanvas" width="1368px" height="768px" style=" border:10px solid black"  ></canvas></td>
         <td>
             <h1>Crush của bạn có màu: </h1>
-            <canvas id="canvas1"width="100" height="100px" style=" border:1px solid black"></canvas>
+            <canvas id="canvas1"width="100px" height="100px" style=" border:1px solid black"></canvas>
             <h1>Điểm số:</h1>
             <input class="khung" type="button" id="soccer">
+        </td>
+        <td id="anhcrush">
+<!--            <img src="../anhngoctrinh.jpg" height="833" width="555"/>-->
         </td>
     </tr>
 
 </table>
-
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     var diemso = 0;
-
     function CircleHead(pos1,pos2,rad) { //class circle
-        var colorArr = [ 'blue', 'green', 'yellow', 'orange', 'gray', 'red',];
+
         this.pos1 = pos1;//ngang
         this.pos2 = pos2;//dọc
         this.rad= rad;
@@ -34,6 +34,7 @@
         this.dy = 0;
 
         this.printfCircle = function () {   //method circle
+            let  ctx = document.getElementById("myCanvas").getContext("2d");
             ctx.clearRect(0,0,1368,768);
             ctx.beginPath();
             ctx.arc(this.pos1,this.pos2,this.rad,0,2*Math.PI);
@@ -47,7 +48,9 @@
             this.pos2 = this.pos2 + this.dy;
             if (this.pos1-this.rad == 0 || this.pos2-this.rad == 0 || this.pos1 +this.rad ==1388 || this.pos2 + this.rad == 788){
                 alert('thua roi');
+                document.getElementById('anhcrush').innerHTML =
                 clearInterval(timeID);
+
             }
             if(this.accident(item)){
                 squaree.randomPosi();
@@ -94,9 +97,6 @@
             case 40:
                 movedownCircle();
                 break;
-            case 32:
-                window.stop();
-                break;
         }
     }
 
@@ -110,6 +110,7 @@
         squaree3.SquareOnTable();
         squaree4.SquareOnTable();
         squaree5.SquareOnTable();
+        squaree6.SquareOnTable();
         document.getElementById('soccer').value = diemso;
     }
     let timeID = setInterval(automove,5);
@@ -132,48 +133,53 @@
     function movedownCircle (){
         circlehead.dx= 0;
         circlehead.dy= +2;
-
-    }
-    function movepause (){                      //pause
-        circlehead.dx = + 0;
-        circlehead.dy = + 0;
     }
     circlehead.printfCircle();
     function docReady() {
         window.addEventListener('keydown',moveclick);
     }
 
+    var colorCursh;
     function Squaree(canhA,toado1,toado2) {
         this.CanhA = canhA;
         this.toaDo1 = toado1;
         this.toaDo2 = toado2;
-        var colorArr = [ 'blue', 'green', 'yellow', 'orange', 'gray', 'red',];
-        this.color = colorArr[Math.floor(Math.random()*6-1)];
+        var colorArr = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
+        this.color = colorArr[Math.floor(Math.random() * 6 - 1)];
         this.SquareOnTable = function () {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
             ctx.beginPath();
             ctx.rect(this.toaDo1, this.toaDo2, this.CanhA, this.CanhA);
             ctx.fillStyle = this.color
-            ctx.fill() ;
-            if (this.toaDo1 <= 110){
+            ctx.fill();
+            if (this.toaDo1 <= 110) {
                 this.toaDo1 = 100;
             }
-            if (this.toaDo1 >=1300){
+            if (this.toaDo1 >= 1300) {
                 this.toaDo1 = 100;
             }
-            if (this.toaDo2 <=100){
-                this.toaDo2 = 100 ;
+            if (this.toaDo2 <= 100) {
+                this.toaDo2 = 100;
             }
-            if (this.toaDo2 >=700){
+            if (this.toaDo2 >= 700) {
                 this.toaDo2 = 100;
             }
             this.randomPosi = function () {
-                this.toaDo1 = Math.random()*600;
-                this.toaDo2 = Math.random()*600;
+                this.toaDo1 = Math.random() * 600;
+                this.toaDo2 = Math.random() * 600;
             }
-        }
+            this.SquareTable = function () {
+                let ctx = document.getElementById("canvas1").getContext("2d");
+                ctx.beginPath();
+                ctx.rect(this.toaDo1, this.toaDo2, this.CanhA, this.CanhA);
+                ctx.fillStyle = colorCursh
+                ctx.fill();
+            }
 
+        }
     }
     let squaree = new Squaree(40,Math.random()*600, Math.random()*600,);
+    colorCursh = this.color;
     squaree.SquareOnTable();
     let squaree1 = new Squaree(40,Math.random()*600, Math.random()*600,);
     squaree1.SquareOnTable();
@@ -185,6 +191,10 @@
     squaree4 .SquareOnTable();
     let squaree5 = new Squaree(40,Math.random()*600, Math.random()*600,);
     squaree5.SquareOnTable();
+    let squaree6 = new Squaree(40,Math.random()*600, Math.random()*600,);
+    squaree6.SquareOnTable();
+    let squacrush = new Squaree(100,0,0);
+    squacrush.SquareTable();
 
 
 
