@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>den pin</title>
+</head>
+<body>
+    <script>
+        let Battery = function (energy) {
+            this.energy = energy;
+
+            this.setEnergy = function (energy) {
+                this.energy = energy
+            }
+
+            this.getEner = function () {
+                return this.energy;
+            }
+            this.decreaseE = function () {
+                if (this.energy > 0){
+                    this.energy--;
+                }
+            }
+        }
+
+        let Flashlight = function () {
+            this.stt = true;
+            this.battery = "";
+
+            this.setBattery = function (battery) {
+                this.battery = battery;
+            }
+
+            this.getBattery = function () {
+                return this.battery.getEner();
+            }
+
+            this.light = function () {
+                if (this.stt){
+                    alert('turning on');
+                }else{
+                    alert('turning off');
+                }
+            }
+
+            this.turnOn = function () {
+                this.stt = true;
+            }
+            this.turnOff = function () {
+                this.stt = false;
+            }
+        }
+
+        let battery = new Battery();
+        battery.setEnergy(10);
+
+        let flashlight = new  Flashlight();
+        flashlight.setBattery(battery);
+
+        document.write(flashlight.getBattery());
+        flashlight.light();
+
+    </script>
+</body>
+</html>

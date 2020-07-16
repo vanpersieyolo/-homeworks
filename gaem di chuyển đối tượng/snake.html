@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>snake</title>
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body onload="docReady()">
+<table cellspacing="5" cellpadding="5">
+    <h1><center>TRUY TÌM CRUSH</center></h1>
+    <tr >
+        <td><canvas id="myCanvas" width="1368px" height="768px" style=" border:10px solid black"  ></canvas></td>
+        <td>
+            <h1>Crush của bạn có màu: </h1>
+            <canvas id="canvas1"width="100" height="100px" style=" border:1px solid black"></canvas>
+            <h1>Điểm số:</h1>
+            <input class="khung" type="button" id="soccer">
+        </td>
+    </tr>
+
+</table>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var diemso = 0;
+
+    function CircleHead(pos1,pos2,rad) { //class circle
+        var colorArr = [ 'blue', 'green', 'yellow', 'orange', 'gray', 'red',];
+        this.pos1 = pos1;//ngang
+        this.pos2 = pos2;//dọc
+        this.rad= rad;
+        this.dx = 2;
+        this.dy = 0;
+
+        this.printfCircle = function () {   //method circle
+            ctx.clearRect(0,0,1368,768);
+            ctx.beginPath();
+            ctx.arc(this.pos1,this.pos2,this.rad,0,2*Math.PI);
+            ctx.fillStyle ="red";
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        this.moveSnake = function (item) {     //method move
+            this.pos1 = this.pos1 + this.dx;
+            this.pos2 = this.pos2 + this.dy;
+            if (this.pos1-this.rad == 0 || this.pos2-this.rad == 0 || this.pos1 +this.rad ==1388 || this.pos2 + this.rad == 788){
+                alert('thua roi');
+                clearInterval(timeID);
+            }
+            if(this.accident(item)){
+                squaree.randomPosi();
+                squaree1.randomPosi();
+                squaree2.randomPosi();
+                squaree3.randomPosi();
+                squaree4.randomPosi();
+                squaree5.randomPosi();
+
+            }
+
+        }
+        this.accident = function (item) {
+            let x = item.toaDo1 + 20;
+            let y = item.toaDo2 + 20;
+            if (Math.abs(this.pos1- x) < 1/2*(this.rad + 20) && Math.abs(this.pos2 - y) < 1/2*(this.rad + 20)){
+                item.toaDo1 = item.toaDo1+Math.random()*300 ;
+                item.toaDo2 = item.toaDo2+Math.random()*300 ;
+
+                diemso++;
+
+                return true
+            }else
+            return false;
+        }
+
+
+    }
+
+    var Pos1 = 90;
+    var Pos2 = 40;
+    let circlehead =new CircleHead(Pos1,Pos2,20);
+    function moveclick(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                moveleftCircle();
+                break;
+            case 39:
+                moverightCircle();
+                break;
+            case 38:
+                moveupCircle();
+                break;
+            case 40:
+                movedownCircle();
+                break;
+            case 32:
+                window.stop();
+                break;
+        }
+    }
+
+
+    function automove() {
+        circlehead.moveSnake(squaree);
+        circlehead.printfCircle();
+        squaree.SquareOnTable();
+        squaree1.SquareOnTable();
+        squaree2.SquareOnTable();
+        squaree3.SquareOnTable();
+        squaree4.SquareOnTable();
+        squaree5.SquareOnTable();
+        document.getElementById('soccer').value = diemso;
+    }
+    let timeID = setInterval(automove,5);
+
+    function moveleftCircle(){
+        circlehead.dx= -2;
+        circlehead.dy=0;
+
+    }
+    function moverightCircle(){
+        circlehead.dx= +2;
+        circlehead.dy=0;
+
+    }
+    function moveupCircle (){
+        circlehead.dx= 0;
+        circlehead.dy= -2;
+
+    }
+    function movedownCircle (){
+        circlehead.dx= 0;
+        circlehead.dy= +2;
+
+    }
+    function movepause (){                      //pause
+        circlehead.dx = + 0;
+        circlehead.dy = + 0;
+    }
+    circlehead.printfCircle();
+    function docReady() {
+        window.addEventListener('keydown',moveclick);
+    }
+
+    function Squaree(canhA,toado1,toado2) {
+        this.CanhA = canhA;
+        this.toaDo1 = toado1;
+        this.toaDo2 = toado2;
+        var colorArr = [ 'blue', 'green', 'yellow', 'orange', 'gray', 'red',];
+        this.color = colorArr[Math.floor(Math.random()*6-1)];
+        this.SquareOnTable = function () {
+            ctx.beginPath();
+            ctx.rect(this.toaDo1, this.toaDo2, this.CanhA, this.CanhA);
+            ctx.fillStyle = this.color
+            ctx.fill() ;
+            if (this.toaDo1 <= 110){
+                this.toaDo1 = 100;
+            }
+            if (this.toaDo1 >=1300){
+                this.toaDo1 = 100;
+            }
+            if (this.toaDo2 <=100){
+                this.toaDo2 = 100 ;
+            }
+            if (this.toaDo2 >=700){
+                this.toaDo2 = 100;
+            }
+            this.randomPosi = function () {
+                this.toaDo1 = Math.random()*600;
+                this.toaDo2 = Math.random()*600;
+            }
+        }
+
+    }
+    let squaree = new Squaree(40,Math.random()*600, Math.random()*600,);
+    squaree.SquareOnTable();
+    let squaree1 = new Squaree(40,Math.random()*600, Math.random()*600,);
+    squaree1.SquareOnTable();
+    let squaree2 = new Squaree(40,Math.random()*600, Math.random()*600,);
+    squaree2.SquareOnTable();
+    let squaree3 = new Squaree(40,Math.random()*600, Math.random()*600,);
+    squaree3.SquareOnTable();
+    let squaree4= new Squaree(40,Math.random()*600, Math.random()*600,);
+    squaree4 .SquareOnTable();
+    let squaree5 = new Squaree(40,Math.random()*600, Math.random()*600,);
+    squaree5.SquareOnTable();
+
+
+
+
+</script>
+</html>
