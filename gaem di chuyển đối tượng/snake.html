@@ -7,7 +7,7 @@
 </head>
 <body onload="docReady()" id="begin" >
 <table cellspacing="5" cellpadding="5">
-    <h1><center><img src="../header.PNG" height="95" width="501"/></center></h1>
+    <center><img src="../header.PNG" height="95" width="501"/></center>
     <tr >
         <td id="canvasne"><canvas id="myCanvas" width="1368px" height="768px" style=" border:10px solid red"></canvas></td>
         <td>
@@ -67,12 +67,7 @@
                 item.toaDo1 = item.toaDo1+Math.random()*1000-200;
                 item.toaDo2 = item.toaDo2+Math.random()*1000 -200;
                 diemso++;
-                squaree.randomPosi();
-                squaree1.randomPosi();
-                squaree2.randomPosi();
-                squaree3.randomPosi();
-                squaree4.randomPosi();
-                squaree5.randomPosi();
+
                 return true
             }else
             return false;
@@ -189,9 +184,7 @@
     squaree5.SquareOnTable();
     let squaree6 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree6.SquareOnTable();
-    function reset1() {
-        document.getElementById('begin').reset();
-    }
+
 
 
 

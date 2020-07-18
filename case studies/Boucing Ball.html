@@ -6,21 +6,24 @@
     <link rel="stylesheet" href="css..css">
 </head>
 <body onload="docReady()" id="begin" >
-<table cellspacing="5" cellpadding="5">
-    <h1><center><img src="../header.PNG" height="95" width="501"/></center></h1>
-    <tr >
-        <td id="canvasne">
-            <canvas id="myCanvas" width="950px" height="768px" style=" border:10px solid pink"></canvas></td>
-        <td>
-            <form id='crushID'></form>
-            <h1>Crush của bạn có màu: </h1>
-            <canvas id="canvasCrush" width="60" height="60" style="border: 10px solid pink"></canvas>
-            <h1>Score:</h1>
-            <input class="khung" type="text" disabled id="score" /><br>
-        </td>
-        <td id="anhcrush"></td>
-    </tr>
-</table>
+<div >
+    <table cellspacing="5" cellpadding="5" id="khunggame">
+        <h1><center><img src="../header.PNG" height="100" width="501"/></center></h1>
+        <tr >
+            <td id="canvasne">
+                <canvas id="myCanvas" width="950px" height="768px" style=" border:10px solid pink"></canvas></td>
+            <td>
+                <form id='crushID'></form>
+                <h1>Crush của bạn có màu: </h1>
+                <input type="text" class="khungchu" value="hello" disabled id="goiy" >
+                <h1>Score:</h1>
+                <input class="khung" type="text" disabled id="score" /><br>
+            </td>
+            <td id="anhcrush"></td>
+        </tr>
+    </table>
+</div>
+
 </body>
 <script>
     var diemso = 0;
@@ -53,13 +56,11 @@
 
             }
             if(this.accident(item)){
-                document.getElementById('anhcrush').innerHTML = '<img src="../ngoctrinh' + Math.floor(Math.random()*3+1) + '.jpg" height="900" width="600"/>'
-                squaree.randomPosi();
-                squaree1.randomPosi();
-                squaree2.randomPosi();
-                squaree3.randomPosi();
-                squaree4.randomPosi();
-                squaree5.randomPosi();
+
+                if (diemso % 10 == 0){
+                    document.getElementById('anhcrush').innerHTML = '<img src="../ngoctrinh' + Math.floor(Math.random()*3+1) + '.jpg" height="900" width="600"/>';
+                }
+
 
             }
 
@@ -179,7 +180,24 @@
     }
 
     let squaree = new Squaree(40,Math.random()*600, Math.random()*600,);
-    // document.getElementById('').innerHTML ='<input type="text" class="khung" disabled style="background:'+'ranDomC'+'">'
+    if (ranDomC == 'red'){
+        document.getElementById('goiy').value = 'ĐỎ';
+    }
+    if (ranDomC == 'orange'){
+        document.getElementById('goiy').value = 'DA CAM';
+    }
+    if (ranDomC == 'yellow' ){
+        document.getElementById('goiy').value = 'VÀNG';
+    }
+    if (ranDomC == 'green'){
+        document.getElementById('goiy').value = 'XANH LÁ CÂY';
+    }
+    if (ranDomC ==  'blue'){
+        document.getElementById('goiy').value = 'XANH DƯƠNG';
+    }
+    if (ranDomC == 'violet'){
+        document.getElementById('goiy').value = 'TÍM';
+    }
     squaree.SquareOnTable();
     let squaree1 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree1.SquareOnTable();

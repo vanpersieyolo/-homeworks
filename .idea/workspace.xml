@@ -20,12 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/case studies/css..css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aaa. bài tập kết thúc modul 1/casestudy1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animation  dep/animation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animation  dep/animation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animation  dep/animation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case studies/Boucing Ball.html" beforeDir="false" afterPath="$PROJECT_DIR$/case studies/Boucing Ball.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gaem di chuyển đối tượng/snake.css" beforeDir="false" afterPath="$PROJECT_DIR$/gaem di chuyển đối tượng/snake.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case studies/css..css" beforeDir="false" afterPath="$PROJECT_DIR$/case studies/css..css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoOop/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/demoOop/demo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gaem di chuyển đối tượng/snake.html" beforeDir="false" afterPath="$PROJECT_DIR$/gaem di chuyển đối tượng/snake.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thực hành Xây dựng lớp date/xaydunglopdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/thực hành Xây dựng lớp date/xaydunglopdate.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +38,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -123,7 +126,7 @@
       <workItem from="1594914943256" duration="9376000" />
       <workItem from="1594943794846" duration="1240000" />
       <workItem from="1594995727438" duration="6427000" />
-      <workItem from="1595065178441" duration="4407000" />
+      <workItem from="1595065178441" duration="17620000" />
     </task>
     <servers />
   </component>
