@@ -2,17 +2,201 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BoucingBall</title>
+    <title>snake</title>
+    <link rel="stylesheet" href="css..css">
 </head>
-<body>
-<canvas id="myCanvas" width="1600" height="900" style="border: 10px solid black" ></canvas>
+<body onload="docReady()" id="begin" >
+<table cellspacing="5" cellpadding="5">
+    <h1><center><img src="../header.PNG" height="95" width="501"/></center></h1>
+    <tr >
+        <td id="canvasne">
+            <canvas id="myCanvas" width="950px" height="768px" style=" border:10px solid pink"></canvas></td>
+        <td>
+            <form id='crushID'></form>
+            <h1>Crush của bạn có màu: </h1>
+            <canvas id="canvasCrush" width="60" height="60" style="border: 10px solid pink"></canvas>
+            <h1>Score:</h1>
+            <input class="khung" type="text" disabled id="score" /><br>
+        </td>
+        <td id="anhcrush"></td>
+    </tr>
+</table>
 </body>
 <script>
-    let Circle = 
-    var ctx = document.getElementById("myCanvas").getContext('2d');
-    ctx.beginPath();
-    ctx.arc(50,50,20,0,2*Math.PI);
-    ctx.fillStyle = 'red';
-    ctx.fill();
+    var diemso = 0;
+    function CircleHead(pos1,pos2,rad) { //class circle
+
+        this.pos1 = pos1;//ngang
+        this.pos2 = pos2;//dọc
+        this.rad= rad;
+        this.dx = 2;
+        this.dy = 0;
+
+        this.printfCircle = function () {   //method circle
+            let  ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.clearRect(0,0,1368,768);
+            ctx.beginPath();
+            ctx.arc(this.pos1,this.pos2,this.rad,0,2*Math.PI);
+            ctx.fillStyle = 'red';
+            ctx.fill();
+            ctx.stroke();
+            ctx.strokeStyle ='black';
+            ctx.closePath();
+        }
+
+        this.moveSnake = function (item) {     //method move
+            this.pos1 = this.pos1 + this.dx;
+            this.pos2 = this.pos2 + this.dy;
+            if (this.pos1-this.rad == 0 || this.pos2-this.rad == 0 || this.pos1 +this.rad ==950 || this.pos2 + this.rad == 768){
+                document.getElementById('anhcrush').innerHTML ="<h1>Đây là crush của thí chủ</h1>"+"<img src=\"../tranducbo.jpg\" height=\"700\" width=\"600\"/>"
+                clearInterval(timeID);
+
+            }
+            if(this.accident(item)){
+                document.getElementById('anhcrush').innerHTML = '<img src="../ngoctrinh' + Math.floor(Math.random()*3+1) + '.jpg" height="900" width="600"/>'
+                squaree.randomPosi();
+                squaree1.randomPosi();
+                squaree2.randomPosi();
+                squaree3.randomPosi();
+                squaree4.randomPosi();
+                squaree5.randomPosi();
+
+            }
+
+        }
+        this.accident = function (item) {
+            let x = item.toaDo1 + 20;
+            let y = item.toaDo2 + 20;
+            if (Math.abs(this.pos1- x) < 1/2*(this.rad+50) && Math.abs(this.pos2 - y) < 1/2*(this.rad+50)){
+                item.toaDo1 = item.toaDo1+Math.random()*1000-200;
+                item.toaDo2 = item.toaDo2+Math.random()*1000 -200;
+                diemso++;
+                squaree.randomPosi();
+                squaree1.randomPosi();
+                squaree2.randomPosi();
+                squaree3.randomPosi();
+                squaree4.randomPosi();
+                squaree5.randomPosi();
+                return true
+            }else
+                return false;
+        }
+
+
+    }
+
+    var Pos1 = 90;
+    var Pos2 = 40;
+    let circlehead =new CircleHead(Pos1,Pos2,20);
+    function moveclick(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                moveleftCircle();
+                break;
+            case 39:
+                moverightCircle();
+                break;
+            case 38:
+                moveupCircle();
+                break;
+            case 40:
+                movedownCircle();
+                break;
+        }
+    }
+
+
+    function automove() {
+        circlehead.moveSnake(squaree);
+        circlehead.printfCircle();
+        squaree.SquareOnTable();
+        document.getElementById('score').value = diemso;
+        squaree1.SquareOnTable();
+        squaree2.SquareOnTable();
+        squaree3.SquareOnTable();
+        squaree4.SquareOnTable();
+        squaree5.SquareOnTable();
+        squaree6.SquareOnTable();
+
+    }
+    let timeID = setInterval(automove,5);
+
+    function moveleftCircle(){
+        circlehead.dx= -2;
+        circlehead.dy=0;
+
+    }
+    function moverightCircle(){
+        circlehead.dx= +2;
+        circlehead.dy=0;
+
+    }
+    function moveupCircle (){
+        circlehead.dx= 0;
+        circlehead.dy= -2;
+
+    }
+    function movedownCircle (){
+        circlehead.dx= 0;
+        circlehead.dy= +2;
+    }
+    circlehead.printfCircle();
+    function docReady() {
+        window.addEventListener('keydown',moveclick);
+    }
+    var ranDomC ='';
+    function Squaree(canhA,toado1,toado2) {
+        this.CanhA = canhA;
+        this.toaDo1 = toado1;
+        this.toaDo2 = toado2;
+        var colorArr = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
+        this.color = colorArr[Math.floor(Math.random() * 6 - 1)];
+        ranDomC = this.color;
+        this.SquareOnTable = function () {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.rect(this.toaDo1, this.toaDo2, this.CanhA, this.CanhA);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            if (this.toaDo1 <= 110) {
+                this.toaDo1 = 100;
+            }
+            if (this.toaDo1 >= 1300) {
+                this.toaDo1 = 100;
+            }
+            if (this.toaDo2 <= 100) {
+                this.toaDo2 = 100;
+            }
+            if (this.toaDo2 >= 700) {
+                this.toaDo2 = 100;
+            }
+            this.randomPosi = function () {
+                this.toaDo1 = Math.random() * 600;
+                this.toaDo2 = Math.random() * 600;
+            }
+
+        }
+    }
+
+    let squaree = new Squaree(40,Math.random()*600, Math.random()*600,);
+    // document.getElementById('').innerHTML ='<input type="text" class="khung" disabled style="background:'+'ranDomC'+'">'
+    squaree.SquareOnTable();
+    let squaree1 = new Squaree(40,Math.random()*600, Math.random()*600);
+    squaree1.SquareOnTable();
+    let squaree2 = new Squaree(40,Math.random()*600, Math.random()*600);
+    squaree2.SquareOnTable();
+    let squaree3 = new Squaree(40,Math.random()*600, Math.random()*600);
+    squaree3.SquareOnTable();
+    let squaree4= new Squaree(40,Math.random()*600, Math.random()*600);
+    squaree4 .SquareOnTable();
+    let squaree5 = new Squaree(40,Math.random()*600, Math.random()*600);
+    squaree5.SquareOnTable();
+    let squaree6 = new Squaree(40,Math.random()*600, Math.random()*600);
+    squaree6.SquareOnTable();
+
+
+
+
+
 </script>
 </html>

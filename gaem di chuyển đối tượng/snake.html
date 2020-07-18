@@ -9,7 +9,7 @@
 <table cellspacing="5" cellpadding="5">
     <h1><center><img src="../header.PNG" height="95" width="501"/></center></h1>
     <tr >
-        <td id="canvasne"><canvas id="myCanvas" width="1368px" height="768px" style=" border:10px solid black"></canvas></td>
+        <td id="canvasne"><canvas id="myCanvas" width="1368px" height="768px" style=" border:10px solid red"></canvas></td>
         <td>
             <h1>Crush của bạn có màu: </h1>
             <center id="canvas2"><canvas id="canvas1"width="100px" height="100px" style="border: 1px solid black"></canvas></center>
@@ -67,6 +67,12 @@
                 item.toaDo1 = item.toaDo1+Math.random()*1000-200;
                 item.toaDo2 = item.toaDo2+Math.random()*1000 -200;
                 diemso++;
+                squaree.randomPosi();
+                squaree1.randomPosi();
+                squaree2.randomPosi();
+                squaree3.randomPosi();
+                squaree4.randomPosi();
+                squaree5.randomPosi();
                 return true
             }else
             return false;
@@ -134,19 +140,19 @@
     function docReady() {
         window.addEventListener('keydown',moveclick);
     }
-
+        var ranDomC ='';
     function Squaree(canhA,toado1,toado2) {
         this.CanhA = canhA;
         this.toaDo1 = toado1;
         this.toaDo2 = toado2;
         var colorArr = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
         this.color = colorArr[Math.floor(Math.random() * 6 - 1)];
-
+        ranDomC = this.color;
         this.SquareOnTable = function () {
             let ctx = document.getElementById("myCanvas").getContext("2d");
             ctx.beginPath();
             ctx.rect(this.toaDo1, this.toaDo2, this.CanhA, this.CanhA);
-            ctx.fillStyle = this.color
+            ctx.fillStyle = this.color;
             ctx.fill();
             if (this.toaDo1 <= 110) {
                 this.toaDo1 = 100;
@@ -169,6 +175,7 @@
     }
 
     let squaree = new Squaree(40,Math.random()*600, Math.random()*600,);
+    alert(ranDomC);
     squaree.SquareOnTable();
     let squaree1 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree1.SquareOnTable();
