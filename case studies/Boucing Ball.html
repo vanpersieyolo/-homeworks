@@ -51,17 +51,12 @@
             this.pos1 = this.pos1 + this.dx;
             this.pos2 = this.pos2 + this.dy;
             if (this.pos1-this.rad == 0 || this.pos2-this.rad == 0 || this.pos1 +this.rad ==950 || this.pos2 + this.rad == 768){
-                document.getElementById('anhcrush').innerHTML ="<h1>Đây là crush của thí chủ</h1>"+"<img src=\"../tranducbo.jpg\" height=\"700\" width=\"600\"/>"
+                document.getElementById('anhcrush').innerHTML ="<h1>Đây là crush của thí chủ</h1>"+"<img src=\"../tranducboo.png\" height=\"700\" width=\"600\"/>"
                 clearInterval(timeID);
 
             }
             if(this.accident(item)){
-
-                if (diemso % 10 == 0){
-                    document.getElementById('anhcrush').innerHTML = '<img src="../ngoctrinh' + Math.floor(Math.random()*3+1) + '.jpg" height="900" width="600"/>';
-                }
-
-
+                    document.getElementById('anhcrush').innerHTML = '<img src="../ngoctrinh'+ Math.floor(Math.random()*5-1)+'.png" height="900" width="700"/>';
             }
 
         }
