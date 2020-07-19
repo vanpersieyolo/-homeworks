@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>casestudy1</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <canvas id="myCanvas" width="950px" height="768px" style=" border:10px solid pink"></canvas>
+            </td>
+        </tr>
+        <button type="button" onclick="gameCilent()"> Start</button>
+    </table>
+</body>
+<script>
+    var ctx = document.getElementById("myCanvas").getContext("2d");
+    var ranDomC = '';
+    let ShapeSquare= function (canh1, td1,td2,clr) {
+        this.canh1 = canh1;
+        this.td1 = td1;
+        this.td2 = td2;
+        this.clr = clr;
+        var colorArr = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
+        this.clr = colorArr[Math.floor(Math.random() * 6 - 1)];
+        ranDomC = this.clr;
+
+        this.getDrawShape = function () {
+            ctx.beginPath();
+            ctx.rect(this.td1, this.td2, this.canh1, this.canh1);
+            ctx.fillStyle = ranDomC;
+            ctx.fill();
+        }
+    }
+    let drawShape = new ShapeSquare(40,Math.random()*600, Math.random()*600,ranDomC);
+
+    let ShapeCircle = function (tdo1,tdo2,radius1) {
+        this.tdo1 = tdo1;//
+        this.tdo2 = tdo2;
+        this.radius1 = radius1;
+        this.dx = 2;
+        this.dy = 0;
+        this.getDrawS = function () {
+            ctx.clearRect(0,0,1368,768);
+            ctx.beginPath();
+            ctx.arc(this.tdo1,this.tdo2,this.radius1,0,2*Math.PI);
+            ctx.fillStyle = 'red';
+            ctx.fill();
+            ctx.stroke();
+            ctx.strokeStyle ='black';
+            ctx.closePath();
+        }
+        this.moveRightc = function () {
+            circle.dx = -2;
+            circle.dy =  0;
+        }
+        this.moveleftc = function () {
+            circle.dx = +2;
+            circle.dy =  0;
+        }
+        this.movedownc = function () {
+            circle.dx = 0;
+            circle.dy = 2;
+        }
+        this.moveupc = function () {
+            circle.dx = 0;
+            circle.dy = -2;
+        }
+    }
+
+    function gameCilent() {
+        let circle = new ShapeCircle(20,20,20);
+        circle.getDrawS();
+        drawShape.getDrawShape();
+    }
+
+    function moveclick(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                moveleftc();
+                break;
+            case 39:
+                moveRightc();
+                break;
+            case 38:
+                moveupc();
+                break;
+            case 40:
+                movedownc();
+                break;
+
+    function moveAuto() {
+       moveclick(evt);
+
+    }
+
+
+
+</script>
+</html>

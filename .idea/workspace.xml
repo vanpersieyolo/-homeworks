@@ -20,17 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08529549-3326-482c-aa67-98d5cda5ba00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gameover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/header.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ngoctrinh1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ngoctrinh2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ngoctrinh3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tranducbo.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caseStudies/snake.html" beforeDir="false" afterPath="$PROJECT_DIR$/caseStudies/snake.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gaem di chuyển đối tượng/snake.css" beforeDir="false" afterPath="$PROJECT_DIR$/gaem di chuyển đối tượng/snake.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gaem di chuyển đối tượng/snake.html" beforeDir="false" afterPath="$PROJECT_DIR$/gaem di chuyển đối tượng/snake.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case studies/Boucing Ball.html" beforeDir="false" afterPath="$PROJECT_DIR$/case studies/Boucing Ball.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case studies/css..css" beforeDir="false" afterPath="$PROJECT_DIR$/case studies/css..css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +32,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -125,7 +117,10 @@
       <workItem from="1594649576641" duration="1463000" />
       <workItem from="1594732390205" duration="17744000" />
       <workItem from="1594827974549" duration="1008000" />
-      <workItem from="1594914943256" duration="8352000" />
+      <workItem from="1594914943256" duration="9376000" />
+      <workItem from="1594943794846" duration="1240000" />
+      <workItem from="1594995727438" duration="6427000" />
+      <workItem from="1595065178441" duration="19901000" />
     </task>
     <servers />
   </component>
@@ -149,10 +144,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="665" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593957429059" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593786381325">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595085431169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593786381325" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595085431169" />
     <state x="739" y="262" key="FileChooserDialogImpl" timestamp="1593360339223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
