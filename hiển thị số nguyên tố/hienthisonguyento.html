@@ -6,29 +6,17 @@
 </head>
 <body>
     <script>
-        var nhapso = +prompt('nhap vao so N: ','');
-        var demSo = 0;
-        var number = 1;
-
-        while (demSo <= nhapso){
-            if (prime(number)){
-                demSo++;
-                document.write(number+' ');
-
-            }
-            number++;
+        var arr = [1,2,3,4,5];
+        function swap(arr) {
+            let arrnew=[];
+            let tamthoi = 0;
+            tamthoi = arr[0];
+            arr[0]= arr[arr.length - 1];
+            arr[arr.length - 1] = tamthoi;
+            return arrnew;
+            alert(arrnew);
         }
-
-      function prime(number) {
-          if (number < 2 ){
-              return false;
-          }
-          for (let i = 2; i <= Math.sqrt(number); i++){
-              if (number % i == 0){
-                  return false;
-              }
-           }return  true;
-      }
+        swap();
 
     </script>
 </body>

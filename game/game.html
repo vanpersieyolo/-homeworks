@@ -2,17 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>snake</title>
     <link rel="stylesheet" href="snake.css">
 </head>
 <body onload="docReady()" id="begin" >
 <table cellspacing="5" cellpadding="5">
-    <h1><center><img src="../header.PNG" height="95" width="501"/></center></h1>
+    <h1><center><img src="../header.PNG" height="80" width="501"/></center></h1>
     <tr >
-        <td id="canvasne"><canvas id="myCanvas" width="1368px" height="768px" style=" border:10px solid black"></canvas></td>
+        <td id="canvasne"><canvas id="myCanvas" width="1369px" height="768px" style=" border:10px solid black"></canvas></td>
         <td>
             <h1>Crush của bạn có màu: </h1>
-            <center id="canvas2"><canvas id="canvas1"width="100px" height="100px" style="border: 1px solid black"></canvas></center>
+            <center id="canvas2"></center>
             <h1>Score:</h1>
             <input class="khung" type="text" disabled id="score"/><br>
         </td>
@@ -49,7 +57,7 @@
 
             }
             if(this.accident(item)){
-                document.getElementById('anhcrush').innerHTML = '<img src="../ngoctrinh' + Math.floor(Math.random()*3+1) + '.jpg" height="900" width="600"/>'
+                document.getElementById('anhcrush').innerHTML = '<img src="../ngoctrinh' + Math.floor(Math.random()*3+1) + '.jpg" height="700" width="600"/>'
                 squaree.randomPosi();
                 squaree1.randomPosi();
                 squaree2.randomPosi();
@@ -63,7 +71,7 @@
         this.accident = function (item) {
             let x = item.toaDo1 + 20;
             let y = item.toaDo2 + 20;
-            if (Math.abs(this.pos1- x) < 1/2*(this.rad + 20) && Math.abs(this.pos2 - y) < 1/2*(this.rad + 20)){
+            if (Math.abs(this.pos1- x) < 1/2*(this.rad + 40) && Math.abs(this.pos2 - y) < 1/2*(this.rad + 40)){
                 item.toaDo1 = item.toaDo1+Math.random()*1000-200;
                 item.toaDo2 = item.toaDo2+Math.random()*1000 -200;
                 diemso++;
@@ -134,13 +142,21 @@
     function docReady() {
         window.addEventListener('keydown',moveclick);
     }
-
+    var randomC = 0;
+    var colorArr = 0;
     function Squaree(canhA,toado1,toado2) {
-        this.CanhA = canhA;
+        this.CanhA = canhA;                                 //'red', 'orange', 'yellow', 'green', 'blue', 'black'
         this.toaDo1 = toado1;
         this.toaDo2 = toado2;
-        var colorArr = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
-        this.color = colorArr[Math.floor(Math.random() * 6 - 1)];
+        colorArr = [1,2,3,4,5,6];
+        colorArr[1]='red';
+        colorArr[2]='orange';
+        colorArr[3]='yellow';
+        colorArr[4]='green';
+        colorArr[5]='blue';
+        colorArr[0]='black';
+        randomC= colorArr[Math.floor(Math.random() * 5 + 0)];
+        this.color = randomC;
 
         this.SquareOnTable = function () {
             let ctx = document.getElementById("myCanvas").getContext("2d");
@@ -167,10 +183,10 @@
 
         }
     }
-
+    var a ='<input style="background:'
     let squaree = new Squaree(40,Math.random()*600, Math.random()*600,);
-    squaree.SquareOnTable();
 
+    squaree.SquareOnTable();
     let squaree1 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree1.SquareOnTable();
     let squaree2 = new Squaree(40,Math.random()*600, Math.random()*600);
@@ -183,12 +199,6 @@
     squaree5.SquareOnTable();
     let squaree6 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree6.SquareOnTable();
-    function reset1() {
-        document.getElementById('begin').reset();
-    }
-
-
-
-
-</script>
+    </script>
 </html>
+
