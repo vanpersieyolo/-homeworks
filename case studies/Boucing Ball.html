@@ -8,14 +8,14 @@
 <body onload="docReady()" id="begin" >
 <div >
     <table cellspacing="5" cellpadding="5" id="khunggame">
-        <h1><center><img src="../header.PNG" height="100" width="501"/></center></h1>
+        <h1><center>LOOKING FOR LOVER !</center></h1>
         <tr >
             <td id="canvasne">
                 <canvas id="myCanvas" width="950px" height="768px" style=" border:10px solid pink"></canvas></td>
             <td>
                 <form id='crushID'></form>
                 <h1>Crush của bạn có màu: </h1>
-                <input type="text" class="khungchu" value="hello" disabled id="goiy" >
+                <input type="text" class="khungchu" value="" disabled id="goiy" >
                 <h1>Score:</h1>
                 <input class="khung" type="text" disabled id="score" /><br>
             </td>
@@ -51,14 +51,13 @@
             this.pos1 = this.pos1 + this.dx;
             this.pos2 = this.pos2 + this.dy;
             if (this.pos1-this.rad == 0 || this.pos2-this.rad == 0 || this.pos1 +this.rad ==950 || this.pos2 + this.rad == 768){
-                document.getElementById('anhcrush').innerHTML ="<h1>Đây là crush của thí chủ</h1>"+"<img src=\"../tranducboo.png\" height=\"700\" width=\"600\"/>"
+                document.getElementById('anhcrush').innerHTML ="<h1>Đây là crush của thí chủ</h1>"+"<img src=\"../tranducboo.png\" height=\"700\" width=\"600\"/><br><h4>giới thiệu nhân vật trong ảnh:</h4><br><h4>TRẦN ĐỨC BO</h4><br><h4>GIỚI TÍNH: NAM</h4><br><h4>GOOGLE SEARCH ĐỂ LẤY INFOR</h4>";
                 clearInterval(timeID);
 
             }
             if(this.accident(item)){
                     document.getElementById('anhcrush').innerHTML = '<img src="../ngoctrinh'+ Math.floor(Math.random()*5)+'.png" height="900" width="700"/>';
             }
-
         }
         this.accident = function (item) {
             let x = item.toaDo1 + 20;
@@ -146,7 +145,7 @@
         this.toaDo1 = toado1;
         this.toaDo2 = toado2;
         var colorArr = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
-        this.color = colorArr[Math.floor(Math.random() * 6 - 1)];
+        this.color = colorArr[Math.floor(Math.random() * 6)];
         ranDomC = this.color;
         this.SquareOnTable = function () {
             let ctx = document.getElementById("myCanvas").getContext("2d");
