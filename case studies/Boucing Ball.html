@@ -14,6 +14,8 @@
                 <canvas id="myCanvas" width="950px" height="768px" style=" border:10px solid pink"></canvas></td>
             <td>
                 <form id='crushID'></form>
+                <h2>bấm<button class="button" onclick="play()">SPACE</button>để bắt đầu</h2>
+
                 <h1>Crush của bạn có màu: </h1>
                 <input type="text" class="khungchu" value="" disabled id="goiy" >
                 <h1>Score:</h1>
@@ -26,6 +28,7 @@
 
 </body>
 <script>
+    let timeID = 0;
     var diemso = 0;
     function CircleHead(pos1,pos2,rad) { //class circle
 
@@ -43,7 +46,7 @@
             ctx.fillStyle = 'red';
             ctx.fill();
             ctx.stroke();
-            ctx.strokeStyle ='black';
+            ctx.strokeStyle ='white';
             ctx.closePath();
         }
 
@@ -51,7 +54,7 @@
             this.pos1 = this.pos1 + this.dx;
             this.pos2 = this.pos2 + this.dy;
             if (this.pos1-this.rad == 0 || this.pos2-this.rad == 0 || this.pos1 +this.rad ==950 || this.pos2 + this.rad == 768){
-                document.getElementById('anhcrush').innerHTML ="<h1>Đây là crush của thí chủ</h1>"+"<img src=\"../tranducboo.png\" height=\"700\" width=\"600\"/><br><h4>giới thiệu nhân vật trong ảnh:</h4><br><h4>TRẦN ĐỨC BO</h4><br><h4>GIỚI TÍNH: NAM</h4><br><h4>GOOGLE SEARCH ĐỂ LẤY INFOR</h4>";
+                document.getElementById('anhcrush').innerHTML ="<h1>Thua rồi nhé :D </h1><br><h1>Crush của bạn nè:   </h1>"+"<img src=\"../tranducboo.png\" height=\"500\" width=\"500\"/><br><h4>giới thiệu nhân vật trong ảnh:</h4><br><h4>TRẦN ĐỨC BO</h4><br><h4>GIỚI TÍNH: Pê đe</h4><br><h4>GOOGLE SEARCH ĐỂ LẤY INFOR</h4>";
                 clearInterval(timeID);
 
             }
@@ -67,6 +70,24 @@
                 item.toaDo2 = item.toaDo2+Math.random()*1000 -200;
                 diemso++;
                 squaree.randomPosi();
+                if (ranDomC == 'red'){
+                    document.getElementById('goiy').value = 'ĐỎ';
+                }
+                if (ranDomC== 'orange'){
+                    document.getElementById('goiy').value = 'DA CAM';
+                }
+                if (ranDomC == 'yellow' ){
+                    document.getElementById('goiy').value = 'VÀNG';
+                }
+                if (ranDomC== 'green'){
+                    document.getElementById('goiy').value = 'XANH LÁ CÂY';
+                }
+                if (ranDomC ==  'blue'){
+                    document.getElementById('goiy').value = 'XANH DƯƠNG';
+                }
+                if (ranDomC == 'violet'){
+                    document.getElementById('goiy').value = 'TÍM';
+                }
                 squaree1.randomPosi();
                 squaree2.randomPosi();
                 squaree3.randomPosi();
@@ -97,6 +118,9 @@
             case 40:
                 movedownCircle();
                 break;
+            case 32:
+                play();  // start Game;
+                break;
         }
     }
 
@@ -105,16 +129,18 @@
         circlehead.moveSnake(squaree);
         circlehead.printfCircle();
         squaree.SquareOnTable();
-        document.getElementById('score').value = diemso;
         squaree1.SquareOnTable();
         squaree2.SquareOnTable();
         squaree3.SquareOnTable();
         squaree4.SquareOnTable();
         squaree5.SquareOnTable();
         squaree6.SquareOnTable();
-
+        document.getElementById('score').value = diemso;
     }
-    let timeID = setInterval(automove,5);
+
+    function play(){
+        timeID =setInterval(automove,5);
+    }
 
     function moveleftCircle(){
         circlehead.dx= -2;
@@ -144,7 +170,7 @@
         this.CanhA = canhA;
         this.toaDo1 = toado1;
         this.toaDo2 = toado2;
-        var colorArr = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
+        var colorArr = ['red', 'orange', 'yellow', 'green', 'blue', 'violet','Cyan'];
         this.color = colorArr[Math.floor(Math.random() * 6)];
         ranDomC = this.color;
         this.SquareOnTable = function () {
@@ -168,31 +194,38 @@
             this.randomPosi = function () {
                 this.toaDo1 = Math.random() * 600;
                 this.toaDo2 = Math.random() * 600;
-            }
+                this.color = colorArr[Math.floor(Math.random() * 6)];
+                ranDomC = this.color;
 
+            }
         }
     }
-
+    function changeColorr(){
+        if (ranDomC == 'red'){
+            document.getElementById('goiy').value = 'ĐỎ';
+        }
+        if (ranDomC== 'orange'){
+            document.getElementById('goiy').value = 'DA CAM';
+        }
+        if (ranDomC == 'yellow' ){
+            document.getElementById('goiy').value = 'VÀNG';
+        }
+        if (ranDomC== 'green'){
+            document.getElementById('goiy').value = 'XANH LÁ CÂY';
+        }
+        if (ranDomC ==  'blue'){
+            document.getElementById('goiy').value = 'XANH DƯƠNG';
+        }
+        if (ranDomC == 'violet'){
+            document.getElementById('goiy').value = 'TÍM';
+        }
+        if (ranDomC == 'Cyan'){
+            document.getElementById('goiy').value = 'xanh nhạt';
+        }
+    };
     let squaree = new Squaree(40,Math.random()*600, Math.random()*600,);
-    if (ranDomC == 'red'){
-        document.getElementById('goiy').value = 'ĐỎ';
-    }
-    if (ranDomC == 'orange'){
-        document.getElementById('goiy').value = 'DA CAM';
-    }
-    if (ranDomC == 'yellow' ){
-        document.getElementById('goiy').value = 'VÀNG';
-    }
-    if (ranDomC == 'green'){
-        document.getElementById('goiy').value = 'XANH LÁ CÂY';
-    }
-    if (ranDomC ==  'blue'){
-        document.getElementById('goiy').value = 'XANH DƯƠNG';
-    }
-    if (ranDomC == 'violet'){
-        document.getElementById('goiy').value = 'TÍM';
-    }
     squaree.SquareOnTable();
+    changeColorr();
     let squaree1 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree1.SquareOnTable();
     let squaree2 = new Squaree(40,Math.random()*600, Math.random()*600);
@@ -205,10 +238,6 @@
     squaree5.SquareOnTable();
     let squaree6 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree6.SquareOnTable();
-
-
-
-
 
 </script>
 </html>

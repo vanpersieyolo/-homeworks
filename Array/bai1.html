@@ -18,36 +18,20 @@
 
 </body>
 <script>
-    var testArray = [1,2,3,4,5,6,7,8,9,10];
-    function display(testArray) {
-        let a = "";
-        for (let i = 0; i <testArray.length; i++) {
 
-        } a += testArray;
-       return a;
+    var sum1 = 0;
+    var sum2 = 0;
+    var x = 0;
+    for (let i = 0 ;i < arr.length; i++){
+        for( let j = arr.length[i]; j > 0 ; j--){
+            if (i ==j){
+                sum1=sum1+arr[i][j];
+                sum2 = sum2+arr[j][i];
+            }
+        }
     }
-
-    function deleteitem() {
-        var x = prompt('phan tu bat dau xoa: ');
-        var y = prompt('so phan tu xoa di: ');
-        testArray.splice(x,y);
-        printf();
-
-    }
-
-    function additem() {
-        var additiem = prompt(' nhap vao gia tri can add: ');
-        testArray.push(additiem);
-        printf();
-
-
-    }
-    function printf() {
-        document.getElementById('thuchien').value = display(testArray);
-    }
-    function resetText() {
-        document.getElementById('thuchien').value = '';
-    }
+        x = Math.abs(a-b);
+    alert(x);
 
 
 </script>
