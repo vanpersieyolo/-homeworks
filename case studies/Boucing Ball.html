@@ -11,11 +11,11 @@
         <h1><center>LOOKING FOR LOVER !</center></h1>
         <tr >
             <td id="canvasne">
-                <canvas id="myCanvas" width="950px" height="768px" style=" border:10px solid pink"></canvas></td>
+                <canvas id="myCanvas" width="950px" height="768px" style=" border:10px solid pink"></canvas>
+            </td>
             <td>
                 <form id='crushID'></form>
-                <h2>bấm<button class="button" onclick="play()">SPACE</button>để bắt đầu</h2>
-
+                <h2>bấm<button class="button" onclick="playgame()">Space</button>để bắt đầu</h2>
                 <h1>Crush của bạn có màu: </h1>
                 <input type="text" class="khungchu" value="" disabled id="goiy" >
                 <h1>Score:</h1>
@@ -30,6 +30,7 @@
 <script>
     let timeID = 0;
     var diemso = 0;
+    var countSpace = 0;
     function CircleHead(pos1,pos2,rad) { //class circle
 
         this.pos1 = pos1;//ngang
@@ -118,50 +119,45 @@
             case 40:
                 movedownCircle();
                 break;
-            case 32:
-                play();  // start Game;
+            case  32:
+                playgame();
+                countSpace++;
                 break;
         }
     }
 
+    circlehead.printfCircle();
+    function automove() {
+           circlehead.printfCircle();            // di chuyển hình tròn
+           circlehead.moveSnake(squaree);
+           squaree.SquareOnTable();
+           squaree1.SquareOnTable();
+           squaree2.SquareOnTable();
+           squaree3.SquareOnTable();
+           squaree4.SquareOnTable();
+           squaree5.SquareOnTable();
+           squaree6.SquareOnTable();
+           document.getElementById('score').value = diemso;
+   }
 
-    function automove() {                 // di chuyển hình tròn
-        circlehead.moveSnake(squaree);
-        circlehead.printfCircle();
-        squaree.SquareOnTable();
-        squaree1.SquareOnTable();
-        squaree2.SquareOnTable();
-        squaree3.SquareOnTable();
-        squaree4.SquareOnTable();
-        squaree5.SquareOnTable();
-        squaree6.SquareOnTable();
-        document.getElementById('score').value = diemso;
-    }
-
-    function play(){                      //spacce
-        timeID =setInterval(automove,5);
-    }
-        // di chuyển theo hướng
+    // di chuyển theo hướng
     function moveleftCircle(){
         circlehead.dx= -2;
         circlehead.dy=0;
-
     }
     function moverightCircle(){
         circlehead.dx= +2;
         circlehead.dy=0;
-
     }
     function moveupCircle (){
         circlehead.dx= 0;
         circlehead.dy= -2;
-
     }
     function movedownCircle (){
         circlehead.dx= 0;
         circlehead.dy= +2;
     }
-    circlehead.printfCircle();
+    // circlehead.printfCircle();
     function docReady() {
         window.addEventListener('keydown',moveclick);
     }
@@ -222,8 +218,8 @@
         if (ranDomC == 'Cyan'){
             document.getElementById('goiy').value = 'xanh nhạt';
         }
-    };
     // các đối tượng hình vuông.
+    }
     let squaree = new Squaree(40,Math.random()*600, Math.random()*600,);
     squaree.SquareOnTable();
     changeColorr();
@@ -240,5 +236,15 @@
     let squaree6 = new Squaree(40,Math.random()*600, Math.random()*600);
     squaree6.SquareOnTable();
 
+    //resetGame
+    function reset1 (){
+
+    }
+    //switch Space = begin
+
+    function playgame(){
+        timeID =setInterval(automove,5);
+        return timeID;
+    }
 </script>
 </html>

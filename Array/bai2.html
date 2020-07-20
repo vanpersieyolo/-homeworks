@@ -5,27 +5,11 @@
     <title>đảo ngược mảng </title>
 </head>
 <body>
-    <div>
-        <h1>Cho mảng có sẵn [-3,5,1,3,2,10];<br></h1>
-
-            mảng đảo ngược lại là:
-            <input type="text" id="reverse" >
-            <input type="button" value="click" di onclick="reverseAr()">
-
-    </div>
+    <input type="button" onclick="check()" id="check1" value="giá trị cần lấy">
 <script>
-    var ar1 = [-3,5,1,3,2,10];
-    function reverseAr(){
-       ar1.reverse();
-       disp(ar1);
+    var value1 = ['giá trị cần lấy', 'giá trị đéo cần lấy 1,'giá trị đeo]
+    function check() {
 
-    }
-    function disp(ar1) {
-        var a = '';
-        for (let i = 0; i < ar1.length; i++) {
-            a += ar1[i] + ',';
-        }
-        document.getElementById('reverse').value = a;
     }
 </script>
 </body>
