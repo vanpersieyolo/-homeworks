@@ -62,7 +62,7 @@
                     document.getElementById('anhcrush').innerHTML = '<img src="../ngoctrinh'+ Math.floor(Math.random()*5)+'.png" height="900" width="700"/>';
             }
         }
-        this.accident = function (item) {
+        this.accident = function (item) { //phương thức va chạm  ---- item là giá trị truyền vào
             let x = item.toaDo1 + 20;
             let y = item.toaDo2 + 20;
             if (Math.abs(this.pos1- x) < 1/2*(this.rad+50) && Math.abs(this.pos2 - y) < 1/2*(this.rad+50)){
@@ -103,7 +103,7 @@
 
     var Pos1 = 90;
     var Pos2 = 40;
-    let circlehead =new CircleHead(Pos1,Pos2,20);
+    let circlehead =new CircleHead(Pos1,Pos2,20);  // khởi tạo đối tượng hình tròn
     function moveclick(evt) {
         switch (evt.keyCode) {
             case 37:
@@ -125,7 +125,7 @@
     }
 
 
-    function automove() {
+    function automove() {                 // di chuyển hình tròn
         circlehead.moveSnake(squaree);
         circlehead.printfCircle();
         squaree.SquareOnTable();
@@ -138,10 +138,10 @@
         document.getElementById('score').value = diemso;
     }
 
-    function play(){
+    function play(){                      //spacce
         timeID =setInterval(automove,5);
     }
-
+        // di chuyển theo hướng
     function moveleftCircle(){
         circlehead.dx= -2;
         circlehead.dy=0;
@@ -166,7 +166,7 @@
         window.addEventListener('keydown',moveclick);
     }
     var ranDomC ='';
-    function Squaree(canhA,toado1,toado2) {
+    function Squaree(canhA,toado1,toado2) {             // class hình vuông
         this.CanhA = canhA;
         this.toaDo1 = toado1;
         this.toaDo2 = toado2;
@@ -200,7 +200,7 @@
             }
         }
     }
-    function changeColorr(){
+    function changeColorr(){        // hàm đổi màu
         if (ranDomC == 'red'){
             document.getElementById('goiy').value = 'ĐỎ';
         }
@@ -223,6 +223,7 @@
             document.getElementById('goiy').value = 'xanh nhạt';
         }
     };
+    // các đối tượng hình vuông.
     let squaree = new Squaree(40,Math.random()*600, Math.random()*600,);
     squaree.SquareOnTable();
     changeColorr();
