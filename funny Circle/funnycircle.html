@@ -5,13 +5,190 @@
     <title>funny circle</title>
 </head>
 <body>
+<table>
+
+    <tr>
+        <td>
+            <canvas id="Canvas" width="2000px" height="1000px" style=" border:10px solid black" onmousemove="myFunction(event)" ></canvas>
+            <p id="demo"></p>
+        </td>
+        <td>
+            <h2>Nhập vào giá trị khởi đầu</h2>
+            <input type="text" placeholder="Nhập vào giá trị khởi đầu" id="s">
+            <h2>nhập vào giá trị lực</h2>
+            <input type="text" placeholder="Nhập vào giá trị góc" id="f"><br>
+            <button onclick="shot()">BẮN</button>
+        </td>
+        <td></td>
+    </tr>
+</table>
+
 
 </body>
     <script>
-        var x = [1,3,5,8];
-        var temp = x[x.length-1];
-        x[x.length-1] = x[0];
-        console.log(x);
+            var count = 0;
+            var xx =0;
+            var yy = 0;
+            var x = 0;
+            var  ctx = document.getElementById("Canvas").getContext("2d");
+
+        let Cc = function () {
+            this.vitri1 = 0;//ngang
+            this.vitri2 = 979;//dọc
+            xx = this.vitri1;
+            yy = this.vitri2;
+            this.radius1 = 20;
+
+            this.y = 0;
+            this.x = 0;
+
+            this.drawCc = function () {
+                ctx.clearRect(0, 0, 2000, 1000);
+                ctx.beginPath();
+                ctx.arc(this.vitri1, this.vitri2, this.radius1, 0, 2 * Math.PI);
+                ctx.fillStyle = "red";
+                ctx.fill();
+                ctx.stroke();
+                ctx.closePath();
+            }
+            this.drawCc1 = function () {
+                ctx.clearRect(0, 0, 2000, 1000);
+                ctx.beginPath();
+                ctx.arc(this.vitri1, this.vitri2, this.radius1, 0, 2 * Math.PI);
+                ctx.fillStyle = "red";
+                ctx.stroke();
+                ctx.closePath();
+            }
+            this.moveSnake1 = function () {
+
+                this.vitri1 = this.vitri1 + this.x;
+                this.y += 1;
+                this.vitri2 = this.vitri2 + this.y;
+                if (this.vitri2 > 970) {
+                    clearInterval(timeid);
+                }
+            }
+        }
+
+
+
+            let cc = new Cc();
+            cc.drawCc();
+
+
+         function Drawline () {
+            this.tdo11 = 0;
+            this.tdo12 = 1000;
+
+             this.tdo21 = cc.vitri1;
+             this.tdo22 = cc.vitri2;
+
+            this.drawLine = function () {
+                this.tdo21 = cc.vitri1;
+                this.tdo22 = cc.vitri2
+
+                ctx.beginPath();
+                ctx.moveTo(this.tdo11,this.tdo12);
+                ctx.lineTo(this.tdo21, this.tdo22);
+                ctx.stroke();
+
+            }
+            this.drawline2 = function () {
+                 this.tdo11 = 0;
+                 this.tdo12 = 1000;
+
+                 this.tdo21 = 150;
+                 this.tdo22 = 0;
+             }
+         }
+         let drawL = new Drawline();
+         drawL.drawLine();
+         let drawL1 = new Drawline();
+         drawL1.drawline2();
+            let timeid = 0 ;
+         function shot() {
+             cc.y = - document.getElementById('s').value*Math.sin(document.getElementById('f').value);
+             cc.x = document.getElementById('s').value*Math.cos(document.getElementById('f').value);
+              timeid = setInterval(autoMove,30);
+         }
+
+        function autoMove (){
+            cc.moveSnake1();
+            cc.drawCc();
+
+            drawL.drawLine();
+            square.SquareOnTable(); square.SquareOnTable();
+            square1.SquareOnTable();
+            square2.SquareOnTable();
+            square3.SquareOnTable();
+            square4.SquareOnTable();
+            square5.SquareOnTable();
+            square6.SquareOnTable();
+            square7.SquareOnTable();
+            square9.SquareOnTable();
+            square8.SquareOnTable();
+
+
+        }
+
+
+            function Squaree(canhA,toado1,toado2) {             // class hình vuông
+                this.Canh1 = canhA;
+                this.tdx = toado1;
+                this.tdy = toado2;
+                var colorArr = ['red', 'black'];
+                this.color = colorArr[Math.floor(Math.random() * 2)];
+                this.SquareOnTable = function () {
+                    ctx.beginPath();
+                    ctx.rect(this.tdx, this.tdy, this.Canh1, this.Canh1);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                    ctx.closePath();
+
+                    if (this.tdx >= 1950 || this.tdx <=0 ){
+                        this.tdx ==500;
+                    }
+                    if(this.tdy >=950 || this.tdx <=0)
+                        this.tdy == 500;
+                }
+            }
+
+            let square = new Squaree(40,Math.random()*1000, Math.random()*1000);
+            square.SquareOnTable();
+            let square1 = new Squaree(40,Math.random()*1000, Math.random()*1000);
+            square1.SquareOnTable();
+            let square2 = new Squaree(40,Math.random()*1000, Math.random()*1000);
+            square2.SquareOnTable();
+            let square3 = new Squaree(40,Math.random()*1000, Math.random()*1000);
+            square3.SquareOnTable();
+            let square4 = new Squaree(40,Math.random()*1000, Math.random()*1000);
+            square4.SquareOnTable();
+            let square5 = new Squaree(40,Math.random()*1000, Math.random()*1000);
+            square5.SquareOnTable();
+            let square6 = new Squaree(40,Math.random()*1000, Math.random()*1000);
+            square6.SquareOnTable();
+            let square7= new Squaree(40,Math.random()*1000, Math.random()*1000);
+            square7.SquareOnTable();
+            let square8= new Squaree(40,Math.random()*1000, Math.random()*1000);
+            square8.SquareOnTable();
+            let square9= new Squaree(40,Math.random()*1000, Math.random()*1000);
+            square9.SquareOnTable();
+
+    function line (event) {
+        console.log(event);
+    }
+
+            function myFunction(e) {
+                var x = e.clientX;
+                var y = e.clientY;
+                var coor = "Coordinates: (" + x + "," + y + ")";
+                document.getElementById("demo").innerHTML = coor;
+            }
+
+            function clearCoor() {
+                document.getElementById("demo").innerHTML = "";
+            }
+
 
     </script>
 
